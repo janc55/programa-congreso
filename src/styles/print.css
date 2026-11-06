@@ -1,3 +1,25 @@
+.pdf-export-mode #brochure-container,
+.pdf-export-mode .brochure-container {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 22px 24px !important;
+  width: 794px !important;
+  box-sizing: border-box !important;
+  background-image: none !important;
+  background-color: #f8f9fa !important;
+}
+
+.pdf-export-mode .watermark-shield {
+  display: block !important;
+  opacity: 0.06 !important;
+}
+
 @media print {
   @page {
     size: A4 portrait;
@@ -21,25 +43,24 @@
     display: block !important;
   }
 
-  /* Fixed single A4 sheet for physical paper print: no grey background, no page splits */
+  /* Fixed single A4 sheet for physical paper print */
   #brochure-container,
   .brochure-container {
     box-shadow: none !important;
     border: none !important;
     border-radius: 0 !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 8mm 10mm !important;
-    width: 210mm !important;
-    height: 296mm !important;
-    max-height: 296mm !important;
+    width: 190mm !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
     box-sizing: border-box !important;
     background: #ffffff !important;
     background-image: none !important;
-    page-break-after: avoid !important;
+    page-break-after: always !important;
     page-break-before: avoid !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .watermark-shield {

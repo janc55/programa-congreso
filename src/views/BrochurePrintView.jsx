@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Download, Printer, Filter } from 'lucide-react';
 import ProgramCard from '../components/ProgramCard';
 import BreakBanner from '../components/BreakBanner';
-import { exportElementToA4PDF } from '../utils/pdfExport';
+import { exportElementToImage } from '../utils/pdfExport';
 
 export default function BrochurePrintView({ congressData }) {
   const { congress, careers, salas, days, sessions } = congressData;
@@ -40,11 +40,11 @@ export default function BrochurePrintView({ congressData }) {
     setIsExporting(true);
     try {
       const cleanCareerName = careerTitle.replace(/[^a-zA-Z0-9]/g, '_');
-      const filename = `Programa_${cleanCareerName}_UNIOR_2026.pdf`;
-      await exportElementToA4PDF(brochureRef.current, filename);
+      const filename = `Programa_${cleanCareerName}_UNIOR_2026.png`;
+      await exportElementToImage(brochureRef.current, filename);
     } catch (err) {
-      console.error('Error generating PDF:', err);
-      alert('Hubo un inconveniente al generar el PDF. Por favor intenta nuevamente.');
+      console.error('Error generating image:', err);
+      alert('Hubo un inconveniente al generar la imagen. Por favor intenta nuevamente.');
     } finally {
       setIsExporting(false);
     }
@@ -64,11 +64,10 @@ export default function BrochurePrintView({ congressData }) {
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setSelectedCareer('all')}
-                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-                  selectedCareer === 'all'
-                    ? 'bg-unior-wine text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                }`}
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${selectedCareer === 'all'
+                  ? 'bg-unior-wine text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  }`}
               >
                 Todas (General)
               </button>
@@ -76,11 +75,10 @@ export default function BrochurePrintView({ congressData }) {
                 <button
                   key={key}
                   onClick={() => setSelectedCareer(key)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
-                    selectedCareer === key
-                      ? 'border-slate-900 bg-slate-900 text-white shadow-xs'
-                      : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
-                  }`}
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${selectedCareer === key
+                    ? 'border-slate-900 bg-slate-900 text-white shadow-xs'
+                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                    }`}
                   style={{
                     borderLeftColor: `#${car.color}`,
                     borderLeftWidth: '4px'
@@ -114,17 +112,16 @@ export default function BrochurePrintView({ congressData }) {
               Preguntas y resp.
             </label>
 
-            {/* DIRECT A4 PDF DOWNLOAD BUTTON */}
+            {/* DIRECT IMAGE DOWNLOAD BUTTON */}
             <button
               onClick={handleExportPDF}
               disabled={isExporting}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-unior-wine to-unior-coral text-white text-xs font-bold shadow-md hover:brightness-110 transition-all cursor-pointer ${
-                isExporting ? 'opacity-70 cursor-wait' : ''
-              }`}
-              title="Descargar folleto A4 completo con fondo y marcas de agua"
+              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-unior-wine to-unior-coral text-white text-xs font-bold shadow-md hover:brightness-110 transition-all cursor-pointer ${isExporting ? 'opacity-70 cursor-wait' : ''
+                }`}
+              title="Descargar folleto como imagen"
             >
               <Download className="w-4 h-4" />
-              <span>{isExporting ? 'Generando PDF...' : 'Descargar PDF A4'}</span>
+              <span>{isExporting ? 'Generando...' : 'Descargar Imagen'}</span>
             </button>
 
             {/* Standard Print fallback (clean white paper version) */}
@@ -141,10 +138,10 @@ export default function BrochurePrintView({ congressData }) {
       </div>
 
       {/* BROCHURE SHEET CANVAS (Calibrated A4 Proportions: 794px x 1123px) */}
-      <div 
+      <div
         ref={brochureRef}
         id="brochure-container"
-        className="brochure-container relative bg-white rounded-2xl border border-slate-200/90 shadow-xl p-5 sm:p-6 overflow-hidden mx-auto w-full max-w-[794px] min-h-[1123px] flex flex-col justify-between"
+        className="brochure-container relative bg-white rounded-2xl border border-slate-200/90 shadow-xl pt-1 px-5 sm:px-6 pb-2 sm:pb-3 mx-auto w-full max-w-[794px]"
         style={{
           backgroundImage: `url('/assets/watermarks/fondo-gris.jpg')`,
           backgroundSize: 'cover',
@@ -153,28 +150,28 @@ export default function BrochurePrintView({ congressData }) {
         }}
       >
         {/* Watermark Coat of Arms with subtle opacity */}
-        <div 
+        <div
           className="watermark-shield absolute -right-4 top-6 w-[380px] h-[440px] pointer-events-none select-none opacity-[0.06] bg-no-repeat bg-contain"
           style={{ backgroundImage: `url('/assets/watermarks/Unior Escudo Negro.png')` }}
         />
 
         {/* TOP: HEADER SECTION */}
-        <header className="relative z-10 flex items-center justify-between gap-4 pb-3 border-b border-slate-200 flex-shrink-0">
+        <header className="relative z-10 flex items-center justify-between gap-4 pb-1 border-b border-slate-200 flex-shrink-0">
           {/* Left: Congress Official Logo - Balanced & Crisp */}
           <div className="flex-1 max-w-sm">
-            <img 
-              src="/assets/logos/logo-congreso.png" 
-              alt="1er Congreso Internacional de Integración Científica" 
-              className="h-16 w-auto object-contain drop-shadow-2xs"
+            <img
+              src="/assets/logos/logo-congreso.png"
+              alt="1er Congreso Internacional de Integración Científica"
+              className="h-32 w-auto object-contain drop-shadow-2xs"
             />
           </div>
 
           {/* Right: Career & Program Badge (Centered with flex to prevent offset) */}
           <div className="flex flex-col items-end justify-center flex-shrink-0">
-            <div className="px-4 py-1 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-widest uppercase flex items-center justify-center leading-none mb-1 shadow-2xs">
+            <div className="px-4 py-1 rounded-full bg-[#F05023] text-white text-xl font-black tracking-widest uppercase flex items-center justify-center leading-none mb-0.5 shadow-2xs">
               PROGRAMA
             </div>
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 uppercase leading-none">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 uppercase leading-none">
               {careerTitle}
             </h2>
           </div>
@@ -290,16 +287,16 @@ export default function BrochurePrintView({ congressData }) {
         </div>
 
         {/* BOTTOM: FOOTER SECTION (Always pinned to bottom of A4) */}
-        <footer className="relative z-10 mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between gap-4 flex-shrink-0">
+        <footer className="relative z-10 mt-2 pt-2.5 border-t border-slate-200 flex items-center justify-between gap-4 flex-shrink-0">
           {/* Organiza: UNIOR Official Logo */}
           <div className="flex items-center gap-2">
             <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-500">
               Organiza:
             </span>
-            <img 
-              src="/assets/logos/unior-logo.png" 
-              alt="UNIOR - Universidad Privada de Oruro" 
-              className="h-7 w-auto object-contain"
+            <img
+              src="/assets/logos/unior-logo.png"
+              alt="UNIOR - Universidad Privada de Oruro"
+              className="h-11 w-auto object-contain"
             />
           </div>
 
@@ -309,28 +306,28 @@ export default function BrochurePrintView({ congressData }) {
               Con el apoyo de:
             </span>
             <div className="flex items-center gap-2.5">
-              <img 
-                src="/assets/logos/gador.png" 
-                alt="Gobierno Autónomo Departamental de Oruro" 
-                className="h-6 w-auto object-contain"
+              <img
+                src="/assets/logos/gador.png"
+                alt="Gobierno Autónomo Departamental de Oruro"
+                className="h-10 w-auto object-contain"
                 title="Gobierno Autónomo Departamental de Oruro"
               />
-              <img 
-                src="/assets/logos/gador-secretaria-cultura.png" 
-                alt="Cultura y Turismo Oruro" 
-                className="h-6 w-auto object-contain"
+              <img
+                src="/assets/logos/gador-secretaria-cultura.png"
+                alt="Cultura y Turismo Oruro"
+                className="h-10 w-auto object-contain"
                 title="Cultura y Turismo Oruro"
               />
-              <img 
-                src="/assets/logos/gamo.png" 
-                alt="Gobierno Autónomo Municipal de Oruro" 
-                className="h-6 w-auto object-contain"
+              <img
+                src="/assets/logos/gamo.png"
+                alt="Gobierno Autónomo Municipal de Oruro"
+                className="h-10 w-auto object-contain"
                 title="Gobierno Autónomo Municipal de Oruro"
               />
-              <img 
-                src="/assets/logos/gamo-secretaria-cultura.png" 
-                alt="Secretaría Municipal de Cultura" 
-                className="h-5 w-auto object-contain"
+              <img
+                src="/assets/logos/gamo-secretaria-cultura.png"
+                alt="Secretaría Municipal de Cultura"
+                className="h-9 w-auto object-contain"
                 title="Secretaría Municipal de Cultura"
               />
             </div>
