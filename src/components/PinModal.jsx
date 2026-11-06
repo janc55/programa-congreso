@@ -9,9 +9,8 @@ export default function PinModal({ isOpen, onClose, onSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Default PIN: unior2026 or 2026
-    const cleanPin = pin.trim().toLowerCase();
-    if (cleanPin === 'unior2026' || cleanPin === '2026' || cleanPin === 'unior') {
+    const cleanPin = pin.trim();
+    if (cleanPin === '102334') {
       localStorage.setItem('unior_committee_auth', 'true');
       setError(false);
       onSuccess();
@@ -48,7 +47,7 @@ export default function PinModal({ isOpen, onClose, onSuccess }) {
               type="password"
               value={pin}
               onChange={(e) => { setPin(e.target.value); setError(false); }}
-              placeholder="Ej. unior2026"
+              placeholder="Ingresa el PIN de seguridad"
               autoFocus
               className={`w-full px-3.5 py-2.5 rounded-xl border text-sm font-medium transition-all outline-hidden ${
                 error 
@@ -58,7 +57,7 @@ export default function PinModal({ isOpen, onClose, onSuccess }) {
             />
             {error && (
               <p className="text-xs text-red-600 mt-1.5 font-medium">
-                PIN incorrecto. Intenta con <code className="bg-red-100 px-1 rounded">unior2026</code>.
+                PIN incorrecto. Verifica los dígitos e intenta nuevamente.
               </p>
             )}
           </div>
@@ -79,10 +78,6 @@ export default function PinModal({ isOpen, onClose, onSuccess }) {
             </button>
           </div>
         </form>
-
-        <div className="mt-4 pt-3 border-t border-slate-100 text-center">
-          <span className="text-[11px] text-slate-400">PIN predeterminado: <strong>unior2026</strong></span>
-        </div>
       </div>
     </div>
   );

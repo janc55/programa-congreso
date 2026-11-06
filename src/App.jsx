@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import congressData from './data/congressData.json';
 import Navbar from './components/Navbar';
 import PinModal from './components/PinModal';
@@ -9,53 +9,65 @@ import PhotoAuditView from './views/PhotoAuditView';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('agenda');
+  const [isAdminMode, setIsAdminMode] = useState(false);
   const [isCommitteeAuth, setIsCommitteeAuth] = useState(false);
   const [isPinModalOpen, setIsPinModalOpen] = useState(false);
 
-  // Check auth and initial hash on mount
-  useEffect(() => {
+  // Evalua la URL actual (hash, pathname o search params) para determinar vista y permisos
+  const evaluateRoute = useCallback(() => {
     const auth = localStorage.getItem('unior_committee_auth') === 'true';
     setIsCommitteeAuth(auth);
 
-    const hash = window.location.hash.replace('#/', '').replace('#', '');
-    if (hash === 'programa' || hash === 'brochure' || hash === 'pdf') {
-      setActiveTab('brochure');
-    } else if (hash === 'comite' || hash === 'committee' || hash === 'admin') {
-      if (auth) {
-        setActiveTab('committee');
-      } else {
-        setIsPinModalOpen(true);
-      }
-    } else if (hash === 'fotos' || hash === 'photos') {
-      setActiveTab('photos');
-    } else {
-      setActiveTab('agenda');
-    }
+    const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
+    const pathname = window.location.pathname.replace(/^\//, '').toLowerCase();
+    const searchParams = new URLSearchParams(window.location.search);
+    const hasAdminParam = searchParams.has('admin');
 
-    const handleHashChange = () => {
-      const newHash = window.location.hash.replace('#/', '').replace('#', '');
-      if (newHash === 'programa' || newHash === 'brochure' || newHash === 'pdf') {
+    const adminRoutes = ['admin', 'comite', 'committee', 'programa', 'brochure', 'pdf', 'fotos', 'photos'];
+    const isAdminRequested = adminRoutes.includes(hash) || adminRoutes.includes(pathname) || hasAdminParam;
+
+    // Si se solicitó una ruta admin o ya está autenticado previamente, activar modo admin
+    if (isAdminRequested || auth) {
+      setIsAdminMode(true);
+
+      if (hash === 'programa' || hash === 'brochure' || hash === 'pdf') {
         setActiveTab('brochure');
-      } else if (newHash === 'comite' || newHash === 'committee') {
-        if (localStorage.getItem('unior_committee_auth') === 'true') {
+      } else if (hash === 'fotos' || hash === 'photos') {
+        setActiveTab('photos');
+      } else if (hash === 'admin' || hash === 'comite' || hash === 'committee' || pathname === 'admin') {
+        if (auth) {
           setActiveTab('committee');
         } else {
+          setActiveTab('agenda');
           setIsPinModalOpen(true);
         }
-      } else if (newHash === 'fotos') {
-        setActiveTab('photos');
-      } else {
+      } else if (hash === 'agenda') {
         setActiveTab('agenda');
+      } else {
+        // Default admin view
+        setActiveTab(auth ? 'committee' : 'agenda');
       }
+    } else {
+      // Modo exclusivo público (Asistentes)
+      setIsAdminMode(false);
+      setActiveTab('agenda');
+    }
+  }, []);
+
+  useEffect(() => {
+    evaluateRoute();
+
+    const handleHashChange = () => {
+      evaluateRoute();
     };
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  }, [evaluateRoute]);
 
   const handleSelectTab = (tab) => {
     setActiveTab(tab);
-    if (tab === 'agenda') window.location.hash = '#/';
+    if (tab === 'agenda') window.location.hash = '#/agenda';
     if (tab === 'brochure') window.location.hash = '#/programa';
     if (tab === 'committee') window.location.hash = '#/comite';
     if (tab === 'photos') window.location.hash = '#/fotos';
@@ -63,6 +75,7 @@ export default function App() {
 
   const handlePinSuccess = () => {
     setIsCommitteeAuth(true);
+    setIsAdminMode(true);
     setIsPinModalOpen(false);
     setActiveTab('committee');
     window.location.hash = '#/comite';
@@ -71,10 +84,9 @@ export default function App() {
   const handleLogoutCommittee = () => {
     localStorage.removeItem('unior_committee_auth');
     setIsCommitteeAuth(false);
-    if (activeTab === 'committee') {
-      setActiveTab('agenda');
-      window.location.hash = '#/';
-    }
+    setIsAdminMode(false);
+    setActiveTab('agenda');
+    window.location.hash = '#/';
   };
 
   return (
@@ -83,6 +95,7 @@ export default function App() {
         activeTab={activeTab}
         onSelectTab={handleSelectTab}
         isCommitteeAuth={isCommitteeAuth}
+        isAdminMode={isAdminMode}
         onOpenPinModal={() => setIsPinModalOpen(true)}
         onLogoutCommittee={handleLogoutCommittee}
       />
@@ -92,22 +105,28 @@ export default function App() {
           <PublicAgendaView congressData={congressData} />
         )}
 
-        {activeTab === 'brochure' && (
+        {isAdminMode && activeTab === 'brochure' && (
           <BrochurePrintView congressData={congressData} />
         )}
 
-        {activeTab === 'committee' && (
+        {isAdminMode && activeTab === 'committee' && (
           <CommitteeDashboard congressData={congressData} />
         )}
 
-        {activeTab === 'photos' && (
+        {isAdminMode && activeTab === 'photos' && (
           <PhotoAuditView congressData={congressData} />
         )}
       </main>
 
       <PinModal
         isOpen={isPinModalOpen}
-        onClose={() => setIsPinModalOpen(false)}
+        onClose={() => {
+          setIsPinModalOpen(false);
+          // Si no completó auth y estaba en comite/admin, volver a agenda pública
+          if (!isCommitteeAuth) {
+            setActiveTab('agenda');
+          }
+        }}
         onSuccess={handlePinSuccess}
       />
 
@@ -115,6 +134,7 @@ export default function App() {
       <footer className="no-print py-6 border-t border-slate-200 bg-white text-center text-xs text-slate-500">
         <p>1er Congreso Internacional de Integración Científica · Universidad Privada de Oruro (UNIOR)</p>
         <p className="text-[11px] text-slate-400 mt-1">12 y 13 de Noviembre de 2026 · Hotel Edén, Oruro, Bolivia</p>
+        <p className="text-[11px] text-slate-400 mt-2 font-medium">Desarrollado por NettiDev</p>
       </footer>
     </div>
   );
