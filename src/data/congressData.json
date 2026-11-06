@@ -1,0 +1,2339 @@
+{
+  "congress": {
+    "edition": "1er",
+    "name": "Congreso Internacional de Integración Científica",
+    "slogan": "Innovación, Ciencia y Tecnología para el Desarrollo Integral",
+    "dates": "12 y 13 de noviembre de 2026",
+    "preCongressDate": "11 de noviembre de 2026",
+    "venue": "Hotel Edén, Oruro, Bolivia",
+    "mainRoom": "Salón Paraíso, Subterráneo",
+    "website": "congreso.unior.edu.bo",
+    "organizer": {
+      "institution": "Universidad Privada de Oruro",
+      "short": "UNIOR",
+      "motto": "Nosce Te Ipsum Et Iustitia In Disciplina"
+    },
+    "partners": [
+      {
+        "name": "Gobierno Autónomo Departamental de Oruro",
+        "short": "GADOR"
+      },
+      {
+        "name": "Cultura y Turismo Oruro",
+        "short": "Turismo Oruro"
+      },
+      {
+        "name": "Gobierno Autónomo Municipal de Oruro",
+        "short": "GAMO"
+      },
+      {
+        "name": "Secretaría Municipal de Cultura",
+        "short": "Cultura Oruro"
+      }
+    ]
+  },
+  "careers": {
+    "med": {
+      "name": "Medicina",
+      "color": "C6D9F1"
+    },
+    "enf": {
+      "name": "Enfermería",
+      "color": "FF99CC"
+    },
+    "odo": {
+      "name": "Odontología",
+      "color": "B2A1C7"
+    },
+    "pro": {
+      "name": "Prótesis Dental",
+      "color": "D99594"
+    },
+    "der": {
+      "name": "Derecho",
+      "color": "76923C"
+    },
+    "sis": {
+      "name": "Ing. Sistemas",
+      "color": "FFFF00"
+    },
+    "aud": {
+      "name": "Auditoría / Adm. Empresas",
+      "color": "E26B0A"
+    },
+    "gas": {
+      "name": "Gastronomía",
+      "color": "FABF8F"
+    }
+  },
+  "salas": {
+    "1": "Subterráneo Hotel Edén",
+    "2": "Piso 2 Hotel Edén",
+    "3": "Piso 6 Hotel Edén",
+    "4": "Piso 7 Hotel Edén"
+  },
+  "days": [
+    {
+      "id": "2026-11-11",
+      "label": "Miércoles 11 de noviembre",
+      "short": "Mié 11 · pre-congreso"
+    },
+    {
+      "id": "2026-11-12",
+      "label": "Jueves 12 de noviembre de 2026",
+      "short": "Jue 12"
+    },
+    {
+      "id": "2026-11-13",
+      "label": "Viernes 13 de noviembre de 2026",
+      "short": "Vie 13"
+    }
+  ],
+  "sessions": [
+    {
+      "day": "2026-11-11",
+      "start": "14:00",
+      "end": "16:00",
+      "sala": null,
+      "room": "Auditorio San Felipe",
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Omar Ricardo Panozo Vargas",
+          "d": "Omar Ricardo Panozo Vargas",
+          "s": "omar-ricardo-panozo-vargas"
+        }
+      ],
+      "title": null,
+      "topic": "Flujo digital en mecánica dental (Digitalización, escaneo e impresión 3D)",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Mencionado como nota al pie de la hoja del jueves"
+      ],
+      "pending": false,
+      "kind": "workshop",
+      "id": 0
+    },
+    {
+      "day": "2026-11-11",
+      "start": "16:00",
+      "end": "18:00",
+      "sala": null,
+      "room": "Laboratorio de Prótesis",
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Omar Ricardo Panozo Vargas",
+          "d": "Omar Ricardo Panozo Vargas",
+          "s": "omar-ricardo-panozo-vargas"
+        }
+      ],
+      "title": null,
+      "topic": "Flujo digital en mecánica dental (Digitalización, escaneo e impresión 3D)",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Mencionado como nota al pie de la hoja del jueves"
+      ],
+      "pending": false,
+      "kind": "workshop",
+      "id": 1
+    },
+    {
+      "day": "2026-11-12",
+      "start": "08:00",
+      "end": "09:30",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [],
+      "title": "Inscripciones y registro",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "SALA 1 y 2"
+      ],
+      "pending": false,
+      "kind": "registro",
+      "id": 2
+    },
+    {
+      "day": "2026-11-12",
+      "start": "09:30",
+      "end": "10:00",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [],
+      "title": "Acto Inaugural Oficial",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Plenaria conjunta para las 600 personas",
+        "SALA 1 (Subterraneo  Hotel Eden)"
+      ],
+      "pending": false,
+      "kind": "acto",
+      "id": 3
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Jorge Nakamura",
+          "d": "Jorge Nakamura",
+          "s": "jorge-nakamura"
+        }
+      ],
+      "title": null,
+      "topic": "Dermatoglifia en el deporte",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "10:40",
+      "sala": 1,
+      "room": null,
+      "id": 4
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Chef. Emilio Garnica Villagomez",
+          "d": "Emilio Garnica Villagomez",
+          "s": "emilio-garnica-villagomez"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "11:00",
+      "sala": 2,
+      "room": null,
+      "id": 5
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Roberto Flores Gamboa",
+          "d": "Roberto Flores Gamboa",
+          "s": "roberto-flores-gamboa"
+        }
+      ],
+      "title": null,
+      "topic": "Procesos de Ejecución - Recuperación del Patrimonio",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "11:00",
+      "sala": 3,
+      "room": null,
+      "id": 6
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Danny Reynaga",
+          "d": "Danny Reynaga",
+          "s": "danny-reynaga"
+        }
+      ],
+      "title": null,
+      "topic": "Carillas de resina estratificada",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "11:00",
+      "sala": 4,
+      "room": null,
+      "id": 7
+    },
+    {
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "12:00",
+      "sala": null,
+      "room": "Laboratorio de computación",
+      "careers": [
+        "sis",
+        "aud"
+      ],
+      "speakers": [
+        {
+          "n": "Ing. Cesar Vincenty",
+          "d": "Cesar Vincenty",
+          "s": "cesar-vincenty"
+        }
+      ],
+      "title": null,
+      "topic": "Ciencia de datos con Python para la gestión de riesgos de seguridad en la información",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 8
+    },
+    {
+      "day": "2026-11-12",
+      "start": "10:00",
+      "end": "11:00",
+      "sala": null,
+      "room": "Sala de simulacion 2",
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Jenny Herminia Marca Manani",
+          "d": "Jenny Herminia Marca Manani",
+          "s": "jenny-herminia-marca-manani"
+        }
+      ],
+      "title": null,
+      "topic": "IMC: la clave del bienestar",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 9
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Mr. Eduardo Condori Aspiazu",
+          "d": "Eduardo Condori Aspiazu",
+          "s": "eduardo-condori-aspiazu"
+        }
+      ],
+      "title": null,
+      "topic": "PHTLS y TECC/TCCC",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "10:40",
+      "end": "11:20",
+      "sala": 1,
+      "room": null,
+      "id": 10
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Chef. Marco Antonio Quelca",
+          "d": "Marco Antonio Quelca",
+          "s": "marco-antonio-quelca"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "11:00",
+      "end": "12:00",
+      "sala": 2,
+      "room": null,
+      "id": 11
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Katiuska Aranibar Gonzales",
+          "d": "Katiuska Aranibar Gonzales",
+          "s": "katiuska-aranibar-gonzales"
+        }
+      ],
+      "title": null,
+      "topic": "Requisitos, Trámites y Formalidades en Derechos Reales",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "11:00",
+      "end": "12:00",
+      "sala": 3,
+      "room": null,
+      "id": 12
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Reynaga",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "11:00",
+      "end": "11:15",
+      "sala": 4,
+      "room": null,
+      "id": 13
+    },
+    {
+      "day": "2026-11-12",
+      "start": "11:00",
+      "end": "12:00",
+      "sala": null,
+      "room": "sala de simulación 2",
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Leaño",
+          "d": "Leaño",
+          "s": "leano"
+        }
+      ],
+      "title": null,
+      "topic": "Manos que Salvan: RCP, Vendajes y Torniquetes",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 14
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Gabriel Galindo",
+          "d": "Gabriel Galindo",
+          "s": "gabriel-galindo"
+        }
+      ],
+      "title": null,
+      "topic": "Cirugía Ortognática",
+      "who": null,
+      "virtual": true,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "11:15",
+      "end": "12:15",
+      "sala": 4,
+      "room": null,
+      "id": 15
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Willy Benjamín Suárez",
+          "d": "Willy Benjamín Suárez",
+          "s": "willy-benjamin-suarez"
+        }
+      ],
+      "title": null,
+      "topic": "PHTLS First Responder",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "11:20",
+      "end": "12:00",
+      "sala": 1,
+      "room": null,
+      "id": 16
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Nakamura / Condori / Suárez",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "12:00",
+      "end": "12:30",
+      "sala": 1,
+      "room": null,
+      "id": 17
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Garnica / Quelca",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "12:00",
+      "end": "12:30",
+      "sala": 2,
+      "room": null,
+      "id": 18
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Aranibar / Flores",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "12:00",
+      "end": "12:30",
+      "sala": 3,
+      "room": null,
+      "id": 19
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Galindo",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "12:15",
+      "end": "12:30",
+      "sala": 4,
+      "room": null,
+      "id": 20
+    },
+    {
+      "day": "2026-11-12",
+      "start": "12:30",
+      "end": "14:15",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [],
+      "title": "ALMUERZO",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "EDIFICIO CENTRAL UNIOR"
+      ],
+      "pending": false,
+      "kind": "almuerzo",
+      "id": 21
+    },
+    {
+      "day": "2026-11-12",
+      "start": "14:00",
+      "end": "16:00",
+      "sala": null,
+      "room": "AUDITORIO",
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Armando Adrian Jimenez",
+          "d": "Armando Adrian Jimenez",
+          "s": "armando-adrian-jimenez"
+        }
+      ],
+      "title": null,
+      "topic": "Fotografía Gastronómica",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 22
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Jocelyn Chavez Farro",
+          "d": "Jocelyn Chavez Farro",
+          "s": "jocelyn-chavez-farro"
+        }
+      ],
+      "title": null,
+      "topic": "Transformando la salud: innovación, tecnología y humanización del cuidado",
+      "who": null,
+      "virtual": true,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "15:30",
+      "sala": 1,
+      "room": null,
+      "id": 23
+    },
+    {
+      "careers": [
+        "sis",
+        "aud"
+      ],
+      "speakers": [
+        {
+          "n": "MBA. Ing. Víctor Hugo Cortés Cortés",
+          "d": "Víctor Hugo Cortés Cortés",
+          "s": "victor-hugo-cortes-cortes"
+        }
+      ],
+      "title": null,
+      "topic": "Auditoría de sistemas de información para indicadores ESG",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "15:30",
+      "sala": 2,
+      "room": null,
+      "id": 24
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Yerko Paz Huet",
+          "d": "Yerko Paz Huet",
+          "s": "yerko-paz-huet"
+        }
+      ],
+      "title": null,
+      "topic": "Derecho Notarial",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "16:00",
+      "sala": 3,
+      "room": null,
+      "id": 25
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. TPD. Madai Montoya Lopez",
+          "d": "Madai Montoya Lopez",
+          "s": "madai-montoya-lopez"
+        }
+      ],
+      "title": null,
+      "topic": "Carillas de Ceramage",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "15:30",
+      "sala": 4,
+      "room": null,
+      "id": 26
+    },
+    {
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "16:00",
+      "sala": null,
+      "room": "Sala de Simulación 1",
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Jorge Nakamura",
+          "d": "Jorge Nakamura",
+          "s": "jorge-nakamura"
+        }
+      ],
+      "title": null,
+      "topic": "Artrocentesis",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 27
+    },
+    {
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "16:00",
+      "sala": null,
+      "room": "Sala de Simulación 2",
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Mr. Eduardo Condori Aspiazu",
+          "d": "Eduardo Condori Aspiazu",
+          "s": "eduardo-condori-aspiazu"
+        },
+        {
+          "n": "Dr. Willy Benjamín Suárez",
+          "d": "Willy Benjamín Suárez",
+          "s": "willy-benjamin-suarez"
+        }
+      ],
+      "title": null,
+      "topic": "Uso de torniquetes de unión JUNCTIONAL cuando falla el torniquete tradicional",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 28
+    },
+    {
+      "day": "2026-11-12",
+      "start": "14:30",
+      "end": "16:30",
+      "sala": null,
+      "room": "SALA 3 (Piso 6)",
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Katiuska Aranibar Gonzales",
+          "d": "Katiuska Aranibar Gonzales",
+          "s": "katiuska-aranibar-gonzales"
+        }
+      ],
+      "title": null,
+      "topic": "Consultas de Casos Reales de Derechos Reales",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 29
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Carlos Clavel Tola Quispe",
+          "d": "Carlos Clavel Tola Quispe",
+          "s": "carlos-clavel-tola-quispe"
+        }
+      ],
+      "title": null,
+      "topic": "Competencias avanzadas en NANDA-I, NOC y NIC, Formulación del PAE",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "15:30",
+      "end": "16:30",
+      "sala": 1,
+      "room": null,
+      "id": 30
+    },
+    {
+      "careers": [
+        "sis",
+        "aud"
+      ],
+      "speakers": [
+        {
+          "n": "MSc. Ing. Ibar Mario Vásquez Ramos",
+          "d": "Ibar Mario Vásquez Ramos",
+          "s": "ibar-mario-vasquez-ramos"
+        }
+      ],
+      "title": null,
+      "topic": "Hacking ético, auditoría de seguridad e impacto de ciberataques",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "15:30",
+      "end": "16:30",
+      "sala": 2,
+      "room": null,
+      "id": 31
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Master T.P.D. Eloy Paz Viscarra",
+          "d": "Eloy Paz Viscarra",
+          "s": "eloy-paz-viscarra"
+        }
+      ],
+      "title": null,
+      "topic": "La Nueva Era de las PPRS Digitales",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "15:30",
+      "end": "16:30",
+      "sala": 4,
+      "room": null,
+      "id": 32
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Katiuska Aranibar Gonzales",
+          "d": "Katiuska Aranibar Gonzales",
+          "s": "katiuska-aranibar-gonzales"
+        }
+      ],
+      "title": null,
+      "topic": "Consultas de Casos Reales de Derechos Reales",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-12",
+      "start": "16:00",
+      "end": "17:00",
+      "sala": 3,
+      "room": null,
+      "id": 33
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Chavez / Clavel",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "16:30",
+      "end": "17:00",
+      "sala": 1,
+      "room": null,
+      "id": 34
+    },
+    {
+      "careers": [
+        "sis"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Cortés / Vásquez",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "16:30",
+      "end": "17:00",
+      "sala": 2,
+      "room": null,
+      "id": 35
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Montoya / Paz",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-12",
+      "start": "16:30",
+      "end": "17:00",
+      "sala": 4,
+      "room": null,
+      "id": 36
+    },
+    {
+      "day": "2026-11-12",
+      "start": "17:00",
+      "end": "18:00",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [
+        {
+          "n": "M.SC. Ing. Adrian Aramayo Ponce",
+          "d": "Adrian Aramayo Ponce",
+          "s": "adrian-aramayo-ponce"
+        }
+      ],
+      "title": "Plenaria",
+      "topic": "Innovación digital",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "plenaria",
+      "id": 37
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Yerko Paz Huet",
+          "d": "Yerko Paz Huet",
+          "s": "yerko-paz-huet"
+        }
+      ],
+      "title": null,
+      "topic": "Derecho Notarial",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "08:00",
+      "end": "09:00",
+      "sala": 1,
+      "room": null,
+      "id": 38
+    },
+    {
+      "careers": [
+        "sis"
+      ],
+      "speakers": [
+        {
+          "n": "MSc. Ing. Ibar Mario Vásquez Ramos",
+          "d": "Ibar Mario Vásquez Ramos",
+          "s": "ibar-mario-vasquez-ramos"
+        }
+      ],
+      "title": null,
+      "topic": "La próxima gran amenaza digital: Algoritmo de Shor, computación cuántica y criptografía",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "08:00",
+      "end": "08:40",
+      "sala": 3,
+      "room": null,
+      "id": 39
+    },
+    {
+      "careers": [
+        "aud"
+      ],
+      "speakers": [
+        {
+          "n": "MBA. Ing. Víctor Hugo Cortés Cortés",
+          "d": "Víctor Hugo Cortés Cortés",
+          "s": "victor-hugo-cortes-cortes"
+        }
+      ],
+      "title": null,
+      "topic": "Dirección estratégica, liderazgo y transiciones",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "08:00",
+      "end": "09:00",
+      "sala": 4,
+      "room": null,
+      "id": 40
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Sarai Paredes",
+          "d": "Sarai Paredes",
+          "s": "sarai-paredes"
+        }
+      ],
+      "title": null,
+      "topic": "Desafíos restauradores odontopediatría",
+      "who": null,
+      "virtual": true,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "08:30",
+      "end": "09:20",
+      "sala": 2,
+      "room": null,
+      "id": 41
+    },
+    {
+      "careers": [
+        "sis"
+      ],
+      "speakers": [
+        {
+          "n": "MSc. Ing. Carlos Ariel Trigo Vargas",
+          "d": "Carlos Ariel Trigo Vargas",
+          "s": "carlos-ariel-trigo-vargas"
+        }
+      ],
+      "title": null,
+      "topic": "OpenID Connect en acción: Autenticación moderna en aplicaciones web",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "08:40",
+      "end": "09:20",
+      "sala": 3,
+      "room": null,
+      "id": 42
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Jorge José Valda Daza",
+          "d": "Jorge José Valda Daza",
+          "s": "jorge-jose-valda-daza"
+        }
+      ],
+      "title": null,
+      "topic": "Inteligencia Artificial y Protección Constitucional",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "09:00",
+      "end": "10:30",
+      "sala": 1,
+      "room": null,
+      "id": 43
+    },
+    {
+      "careers": [
+        "aud"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Jorge Eduardo Espinoza Arzabe",
+          "d": "Jorge Eduardo Espinoza Arzabe",
+          "s": "jorge-eduardo-espinoza-arzabe"
+        }
+      ],
+      "title": null,
+      "topic": "Control de gestión e innovación: lecciones del sector eléctrico boliviano",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "09:00",
+      "end": "10:00",
+      "sala": 4,
+      "room": null,
+      "id": 44
+    },
+    {
+      "careers": [
+        "sis"
+      ],
+      "speakers": [
+        {
+          "n": "Ing. Marco Antonio Laura Avendaño",
+          "d": "Marco Antonio Laura Avendaño",
+          "s": "marco-antonio-laura-avendano"
+        }
+      ],
+      "title": null,
+      "topic": "Reconocimiento y clasificación automatizada de documentos con visión artificial e IA",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "09:20",
+      "end": "10:00",
+      "sala": 3,
+      "room": null,
+      "id": 45
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. TPD. Martín Amaru Aguilar Vilches",
+          "d": "Martín Amaru Aguilar Vilches",
+          "s": "martin-amaru-aguilar-vilches"
+        }
+      ],
+      "title": null,
+      "topic": "Procedimiento laboratorial en prótesis total \"Técnica de Alta Succión\"",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "09:30",
+      "end": "10:20",
+      "sala": 2,
+      "room": null,
+      "id": 46
+    },
+    {
+      "careers": [
+        "sis"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "10:00",
+      "end": "10:30",
+      "sala": 3,
+      "room": null,
+      "id": 47
+    },
+    {
+      "careers": [
+        "aud"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "PENDIENTE (Auditoría)"
+      ],
+      "pending": true,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "10:00",
+      "end": "10:30",
+      "sala": 4,
+      "room": null,
+      "id": 48
+    },
+    {
+      "day": "2026-11-13",
+      "start": "10:00",
+      "end": "12:00",
+      "sala": null,
+      "room": "Sala de Simulación 1",
+      "careers": [
+        "sis",
+        "aud"
+      ],
+      "speakers": [],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": true,
+      "kind": "workshop",
+      "id": 49
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Gabriel Condo Soto",
+          "d": "Gabriel Condo Soto",
+          "s": "gabriel-condo-soto"
+        }
+      ],
+      "title": null,
+      "topic": "Bases anatómicas - heridas bucomaxilofaciales",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "10:30",
+      "end": "11:30",
+      "sala": 1,
+      "room": null,
+      "id": 50
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Ing. Rolando Manuel Barrientos Gomez",
+          "d": "Rolando Manuel Barrientos Gomez",
+          "s": "rolando-manuel-barrientos-gomez"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "10:30",
+      "end": "11:00",
+      "sala": 2,
+      "room": null,
+      "id": 51
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Jorge Nakamura",
+          "d": "Jorge Nakamura",
+          "s": "jorge-nakamura"
+        }
+      ],
+      "title": null,
+      "topic": "Plasma Rico en Plaquetas en Artrosis",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "10:30",
+      "end": "11:10",
+      "sala": 3,
+      "room": null,
+      "id": 52
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Albina Palmira Maldonado Chacon",
+          "d": "Albina Palmira Maldonado Chacon",
+          "s": "albina-palmira-maldonado-chacon"
+        }
+      ],
+      "title": null,
+      "topic": "Cuidados para transformar: Desafíos actuales y la enfermería",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "10:30",
+      "end": "11:30",
+      "sala": 4,
+      "room": null,
+      "id": 53
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Chef. Abrahan Salas",
+          "d": "Abrahan Salas",
+          "s": "abrahan-salas"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:00",
+      "end": "12:00",
+      "sala": 2,
+      "room": null,
+      "id": 54
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Camilo Vásquez Ledezma",
+          "d": "Camilo Vásquez Ledezma",
+          "s": "camilo-vasquez-ledezma"
+        }
+      ],
+      "title": null,
+      "topic": "IA en triage y servicios de emergencia y apoyo diagnóstico",
+      "who": null,
+      "virtual": true,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:10",
+      "end": "11:50",
+      "sala": 3,
+      "room": null,
+      "id": 55
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Condo Soto",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "11:30",
+      "end": "11:45",
+      "sala": 1,
+      "room": null,
+      "id": 56
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Ross Mary Janeth Ibañez Bustillo",
+          "d": "Ross Mary Janeth Ibañez Bustillo",
+          "s": "ross-mary-janeth-ibanez-bustillo"
+        }
+      ],
+      "title": null,
+      "topic": "Ética, Bioética y responsabilidad Legal en Enfermería Oncológica de Avanzada",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:30",
+      "end": "12:30",
+      "sala": 4,
+      "room": null,
+      "id": 57
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Luis Pacheco",
+          "d": "Luis Pacheco",
+          "s": "luis-pacheco"
+        }
+      ],
+      "title": null,
+      "topic": "Irrigación y desinfección en endodoncia",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:45",
+      "end": "12:45",
+      "sala": 1,
+      "room": null,
+      "id": 58
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Sonia Flores Mamani",
+          "d": "Sonia Flores Mamani",
+          "s": "sonia-flores-mamani"
+        }
+      ],
+      "title": null,
+      "topic": "Intubación pediátrica-Desafios",
+      "who": null,
+      "virtual": true,
+      "country": "Brasil",
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:50",
+      "end": "12:30",
+      "sala": 3,
+      "room": null,
+      "id": 59
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Maurice Cazorla Murillo",
+          "d": "Maurice Cazorla Murillo",
+          "s": "maurice-cazorla-murillo"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "12:00",
+      "end": "12:30",
+      "sala": 2,
+      "room": null,
+      "id": 60
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Barrientos / Salas / Cazorla",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "12:30",
+      "end": "13:00",
+      "sala": 2,
+      "room": null,
+      "id": 61
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Nakamura / Vásquez / Flores",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "12:30",
+      "end": "13:00",
+      "sala": 3,
+      "room": null,
+      "id": 62
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Ibañez",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "12:30",
+      "end": "13:00",
+      "sala": 4,
+      "room": null,
+      "id": 63
+    },
+    {
+      "careers": [
+        "odo"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Pacheco",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "12:45",
+      "end": "13:00",
+      "sala": 1,
+      "room": null,
+      "id": 64
+    },
+    {
+      "day": "2026-11-13",
+      "start": "13:00",
+      "end": "14:45",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [],
+      "title": "ALMUERZO",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "EDIFICIO CENTRAL UNIOR"
+      ],
+      "pending": false,
+      "kind": "almuerzo",
+      "id": 65
+    },
+    {
+      "day": "2026-11-13",
+      "start": "14:30",
+      "end": "16:00",
+      "sala": null,
+      "room": "Sala de Debates de Derecho",
+      "careers": [
+        "odo"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Pamela Arias",
+          "d": "Pamela Arias",
+          "s": "pamela-arias"
+        }
+      ],
+      "title": null,
+      "topic": "\"Piensa en 3D\" Orientar, recorrer e interpretar un CBCT",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": "Presencial por grupos",
+      "notes": [],
+      "pending": false,
+      "kind": "workshop",
+      "id": 66
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Pablo Guerrero",
+          "d": "Pablo Guerrero",
+          "s": "pablo-guerrero"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:00",
+      "end": "16:30",
+      "sala": 1,
+      "room": null,
+      "id": 67
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Franz Rodrigo Callizaya Vergara",
+          "d": "Franz Rodrigo Callizaya Vergara",
+          "s": "franz-rodrigo-callizaya-vergara"
+        }
+      ],
+      "title": null,
+      "topic": "Confección de aparatos ortopédicos pre-quirúrgicos para bebés con FLAP",
+      "who": null,
+      "virtual": true,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:00",
+      "end": "15:40",
+      "sala": 2,
+      "room": null,
+      "id": 68
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. ACEFALIA (PENDIENTE nombre)",
+          "d": "ACEFALIA",
+          "s": "acefalia"
+        }
+      ],
+      "title": null,
+      "topic": "Acefalia",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": true,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:00",
+      "end": "15:40",
+      "sala": 3,
+      "room": null,
+      "id": 69
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Ross Mary Janeth Ibañez Bustillo",
+          "d": "Ross Mary Janeth Ibañez Bustillo",
+          "s": "ross-mary-janeth-ibanez-bustillo"
+        }
+      ],
+      "title": null,
+      "topic": "Cuidados para transformar: Desafíos actuales y la enfermería",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:00",
+      "end": "16:00",
+      "sala": 4,
+      "room": null,
+      "id": 70
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. María Luiza Sotomayor Duarte",
+          "d": "María Luiza Sotomayor Duarte",
+          "s": "maria-luiza-sotomayor-duarte"
+        }
+      ],
+      "title": null,
+      "topic": "Mediación en Derecho Civil",
+      "who": null,
+      "virtual": true,
+      "country": "Chile",
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:40",
+      "end": "16:40",
+      "sala": 2,
+      "room": null,
+      "id": 71
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Carmen Durán",
+          "d": "Carmen Durán",
+          "s": "carmen-duran"
+        },
+        {
+          "n": "Dra. Lidia Mamani",
+          "d": "Lidia Mamani",
+          "s": "lidia-mamani"
+        }
+      ],
+      "title": null,
+      "topic": "Agonistas GLP-1",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "15:40",
+      "end": "16:20",
+      "sala": 3,
+      "room": null,
+      "id": 72
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Albina Palmira Maldonado Chacon",
+          "d": "Albina Palmira Maldonado Chacon",
+          "s": "albina-palmira-maldonado-chacon"
+        }
+      ],
+      "title": null,
+      "topic": "Ética, Bioética y responsabilidad Legal en Enfermería Oncológica de Avanzada",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:00",
+      "end": "17:00",
+      "sala": 4,
+      "room": null,
+      "id": 73
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [
+        {
+          "n": "Dra. Alejandra Noldine",
+          "d": "Alejandra Noldine",
+          "s": "alejandra-noldine"
+        }
+      ],
+      "title": null,
+      "topic": "Medicina Tradicional en Medicina Familiar",
+      "who": null,
+      "virtual": true,
+      "country": "Paraguay",
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:20",
+      "end": "17:00",
+      "sala": 3,
+      "room": null,
+      "id": 74
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Andres Tapia",
+          "d": "Andres Tapia",
+          "s": "andres-tapia"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:30",
+      "end": "18:00",
+      "sala": 1,
+      "room": null,
+      "id": 75
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [
+        {
+          "n": "Dr. Edmundo Enrique Vilches Luzio",
+          "d": "Edmundo Enrique Vilches Luzio",
+          "s": "edmundo-enrique-vilches-luzio"
+        }
+      ],
+      "title": null,
+      "topic": "Justicia en Derecho Familiar",
+      "who": null,
+      "virtual": true,
+      "country": "Chile",
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:40",
+      "end": "17:40",
+      "sala": 2,
+      "room": null,
+      "id": 76
+    },
+    {
+      "careers": [
+        "med"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Durán, Mamani, Noldine",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "17:00",
+      "end": "17:30",
+      "sala": 3,
+      "room": null,
+      "id": 77
+    },
+    {
+      "careers": [
+        "enf"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Maldonado / Ibañez",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "17:00",
+      "end": "17:30",
+      "sala": 4,
+      "room": null,
+      "id": 78
+    },
+    {
+      "careers": [
+        "pro"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Dra. TPD. Madai Montoya Lopez / Master T.P.D. Eloy Paz Viscarra",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "PLENARIA"
+      ],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "17:30",
+      "end": "18:00",
+      "sala": 4,
+      "room": null,
+      "id": 79
+    },
+    {
+      "day": "2026-11-13",
+      "start": "17:30",
+      "end": "18:00",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [
+        {
+          "n": "Lic Hans V. Kukok Montoya",
+          "d": "Hans V. Kukok Montoya",
+          "s": "hans-v-kukok-montoya"
+        }
+      ],
+      "title": "Plenaria",
+      "topic": "El poder de la ACTITUD POSITIVA",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "plenaria",
+      "id": 80
+    },
+    {
+      "careers": [
+        "der"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Sotomayor/Vilches",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "17:40",
+      "end": "18:15",
+      "sala": 2,
+      "room": null,
+      "id": 81
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Guerrero / Tapia",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Nota GTH: SALA 4 17:00-17:30"
+      ],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "18:00",
+      "end": "18:30",
+      "sala": 1,
+      "room": null,
+      "id": 82
+    },
+    {
+      "day": "2026-11-13",
+      "start": "18:00",
+      "end": "19:00",
+      "sala": null,
+      "room": null,
+      "careers": [],
+      "speakers": [],
+      "title": "ACTO DE CLAUSURA DEL CONGRESO",
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Plenaria conjunta para las 600 personas"
+      ],
+      "pending": false,
+      "kind": "acto",
+      "id": 83
+    }
+  ],
+  "alerts": [
+    {
+      "level": "conflicto",
+      "day": "2026-11-12",
+      "text": "14:00–16:00 AUDITORIO: Armando Adrian Jimenez coincide con ALMUERZO 12:30–14:15, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-12",
+      "text": "Mismo expositor en dos actividades a la vez: 14:30–16:30 SALA 3 (Piso 6): Katiuska Aranibar Gonzales y 16:00–17:00 Sala 3: Katiuska Aranibar Gonzales"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-12",
+      "text": "Workshop en SALA 3 (Piso 6) (14:30–16:30, Katiuska Aranibar Gonzales) se cruza con 14:30–16:00 Sala 3: Yerko Paz Huet"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-12",
+      "text": "Workshop en SALA 3 (Piso 6) (14:30–16:30, Katiuska Aranibar Gonzales) se cruza con 16:00–17:00 Sala 3: Katiuska Aranibar Gonzales"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-12",
+      "text": "Expositores sin tema en el Excel: Emilio Garnica Villagomez (10:00, Sala 2); Marco Antonio Quelca (11:00, Sala 2)"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "14:30–16:00 Sala de Debates de Derecho: Pamela Arias coincide con ALMUERZO 13:00–14:45, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "16:30–18:00 Sala 1: Andres Tapia coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "16:40–17:40 Sala 2: Edmundo Enrique Vilches Luzio coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "17:30–18:00 Sala 4: Preguntas y respuestas coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con ACTO DE CLAUSURA DEL CONGRESO 18:00–19:00, que es plenaria/general"
+    },
+    {
+      "level": "conflicto",
+      "day": "2026-11-13",
+      "text": "18:00–18:30 Sala 1: Preguntas y respuestas coincide con ACTO DE CLAUSURA DEL CONGRESO 18:00–19:00, que es plenaria/general"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Expositores sin tema en el Excel: Rolando Manuel Barrientos Gomez (10:30, Sala 2); Abrahan Salas (11:00, Sala 2); Maurice Cazorla Murillo (12:00, Sala 2); Pablo Guerrero (15:00, Sala 1); Andres Tapia (16:30, Sala 1)"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Dato pendiente en el Excel: 10:00–10:30 Sala 4: Preguntas y respuestas PENDIENTE (Auditoría)"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Dato pendiente en el Excel: 10:00–12:00 Sala de Simulación 1: sin expositor"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Dato pendiente en el Excel: 15:00–15:40 Sala 3: ACEFALIA – Acefalia"
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Los temas de Lic. Albina Maldonado y Lic. Ross Ibañez están cruzados entre la mañana (10:30 y 11:30) y la tarde (15:00 y 16:00): cada una aparece con el tema de la otra. Confirmar cuál es el correcto."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Columna I sin título: hay 4 horarios (15:00–15:40, 15:40–16:20, 16:20–17:00, 17:00–17:30) pintados de amarillo (Ing. Sistemas) sin ningún expositor. Podrían faltar charlas de Sistemas en la tarde."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Nota \"GTH\" en el Excel: las preguntas de Guerrero/Tapia dicen \"SALA 4 17:00-17:30\", pero en la grilla están en Sala 1 a las 18:00–18:30 y en Sala 4 17:00–17:30 ya hay preguntas de Maldonado/Ibañez."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Hay una fila de workshop \"10:00 - 12:00\" (fila 26) sin lugar, carrera ni expositor: parece un resto."
+    },
+    {
+      "level": "revisar",
+      "day": "general",
+      "text": "Auditoría y Administración de Empresas comparten un solo color en el Excel; aquí van juntas como una carrera. Si necesitas programas separados, hay que decidir qué charlas van a cada una."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-12",
+      "text": "Dr. Yerko Paz Huet dicta \"Derecho Notarial\" el jueves 14:30 y de nuevo el viernes 08:00. Confirmar que es una repetición intencional."
+    }
+  ]
+}

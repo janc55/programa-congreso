@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
+  <rect width="750" height="166.7" fill="#D52B1E"/>
+  <rect y="166.7" width="750" height="166.7" fill="#FCD116"/>
+  <rect y="333.3" width="750" height="166.7" fill="#007934"/>
+  <!-- Central Emblem simplified for crisp thumbnail display -->
+  <circle cx="375" cy="250" r="45" fill="#4A777A" stroke="#B8860B" stroke-width="6"/>
+  <circle cx="375" cy="250" r="32" fill="#E8C340"/>
+  <path d="M360 265 L375 235 L390 265 Z" fill="#8B4513"/>
+  <circle cx="375" cy="225" r="7" fill="#FFD700"/>
+</svg>
+
