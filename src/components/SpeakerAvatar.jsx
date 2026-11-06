@@ -12,14 +12,14 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
 
   const sizeClasses = {
     sm: 'w-8 h-8 text-xs',
-    md: 'w-12 h-12 text-sm',
+    md: 'w-11 h-11 text-sm',
     lg: 'w-16 h-16 text-base',
     xl: 'w-20 h-20 text-lg'
   };
 
   const flagSizes = {
-    sm: 'w-4 h-3 -bottom-0.5 -right-0.5',
-    md: 'w-5 h-3.5 -bottom-1 -right-1',
+    sm: 'w-4 h-2.5 -bottom-0.5 -right-0.5',
+    md: 'w-5 h-3.5 -bottom-0.5 -right-0.5',
     lg: 'w-6 h-4.5 -bottom-1 -right-1',
     xl: 'w-7 h-5 -bottom-1 -right-1'
   };
@@ -44,7 +44,7 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
     <div className={`relative inline-block flex-shrink-0 select-none ${className}`}>
       {/* Photo Container */}
       <div 
-        className={`${sizeClasses[size] || sizeClasses.md} rounded-xl overflow-hidden border-2 border-white/90 bg-slate-100 flex items-center justify-center shadow-xs`}
+        className={`${sizeClasses[size] || sizeClasses.md} rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 flex items-center justify-center shadow-2xs`}
         title={speaker?.n || 'Expositor'}
       >
         {!hasError && photoUrl ? (
@@ -64,15 +64,17 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
         )}
       </div>
 
-      {/* Flag Icon Badge using official flag-icons */}
+      {/* Flag Badge using official flag-icons SVGs as <img> for perfect PDF rendering */}
       {showFlag && flagCode && (
         <div 
-          className={`absolute ${flagSizes[size] || flagSizes.md} rounded-[2px] overflow-hidden shadow-xs border border-white bg-white flex items-center justify-center leading-none`}
+          className={`absolute ${flagSizes[size] || flagSizes.md} rounded-[2px] overflow-hidden shadow-xs border border-white bg-white flex items-center justify-center leading-none z-10`}
           title={`País: ${country || 'Bolivia'}`}
         >
-          <span 
-            className={`fi fi-${flagCode} rounded-[1px] w-full h-full block`} 
-            style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
+          <img 
+            src={`/assets/flags/${flagCode}.svg`} 
+            alt={country || 'Bolivia'}
+            className="w-full h-full object-cover"
+            crossOrigin="anonymous"
           />
         </div>
       )}

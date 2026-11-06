@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react';
-import { Download, Printer, Filter, CheckCircle2, FileText, Sparkles } from 'lucide-react';
+import { Download, Printer, Filter } from 'lucide-react';
 import ProgramCard from '../components/ProgramCard';
 import BreakBanner from '../components/BreakBanner';
 import { exportElementToA4PDF } from '../utils/pdfExport';
 
 export default function BrochurePrintView({ congressData }) {
   const { congress, careers, salas, days, sessions } = congressData;
-  const [selectedCareer, setSelectedCareer] = useState('med'); // default to Medicina
+  const [selectedCareer, setSelectedCareer] = useState('med');
   const [includeGeneral, setIncludeGeneral] = useState(true);
   const [includeQA, setIncludeQA] = useState(true);
   const [isExporting, setIsExporting] = useState(false);
@@ -123,70 +123,70 @@ export default function BrochurePrintView({ congressData }) {
               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-unior-wine to-unior-coral text-white text-xs font-bold shadow-md hover:brightness-110 transition-all cursor-pointer ${
                 isExporting ? 'opacity-70 cursor-wait' : ''
               }`}
-              title="Genera y descarga directamente un archivo PDF A4 con el diseño idéntico a la pantalla"
+              title="Descargar folleto A4 completo con fondo y marcas de agua"
             >
               <Download className="w-4 h-4" />
               <span>{isExporting ? 'Generando PDF...' : 'Descargar PDF A4'}</span>
             </button>
 
-            {/* Standard Print / Ctrl+P fallback */}
+            {/* Standard Print fallback (clean white paper version) */}
             <button
               onClick={() => window.print()}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold hover:bg-slate-50 transition-all"
-              title="Abrir diálogo de impresión del navegador"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold hover:bg-slate-50 transition-all cursor-pointer"
+              title="Imprimir versión en papel limpio (sin fondo gris)"
             >
               <Printer className="w-3.5 h-3.5 text-slate-500" />
-              <span className="hidden sm:inline">Imprimir</span>
+              <span className="hidden sm:inline">Imprimir (Papel)</span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* BROCHURE SHEET CANVAS (Calibrated A4 Proportions and Full Bleed) */}
+      {/* BROCHURE SHEET CANVAS (Fixed A4 proportions with full cover background) */}
       <div 
         ref={brochureRef}
         id="brochure-container"
-        className="brochure-container relative bg-white rounded-3xl border border-slate-200/90 shadow-xl p-6 sm:p-8 overflow-hidden mx-auto w-full max-w-[960px]"
+        className="brochure-container relative bg-white rounded-3xl border border-slate-200 shadow-xl p-6 sm:p-8 overflow-hidden mx-auto w-full max-w-[880px] min-h-[1140px] flex flex-col justify-between"
         style={{
           backgroundImage: `url('/assets/watermarks/fondo-gris.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundColor: '#fafafa'
+          backgroundColor: '#f8f9fa'
         }}
       >
-        {/* Subtle UNIOR Coat of Arms Watermark with Controlled Opacity */}
+        {/* Watermark Coat of Arms with subtle opacity */}
         <div 
-          className="absolute -right-6 top-8 w-[440px] h-[480px] pointer-events-none select-none opacity-[0.07] bg-no-repeat bg-contain"
+          className="watermark-shield absolute -right-4 top-8 w-[420px] h-[480px] pointer-events-none select-none opacity-[0.07] bg-no-repeat bg-contain"
           style={{ backgroundImage: `url('/assets/watermarks/Unior Escudo Negro.png')` }}
         />
 
-        {/* HEADER SECTION */}
-        <header className="relative z-10 flex items-center justify-between gap-4 pb-4 border-b-2 border-slate-200/80">
-          {/* Left: Congress Official Logo */}
-          <div className="flex-1 max-w-sm">
+        {/* TOP: HEADER SECTION */}
+        <header className="relative z-10 flex items-center justify-between gap-4 pb-4 border-b-2 border-slate-200/80 flex-shrink-0">
+          {/* Left: Congress Official Logo - Prominent & Large */}
+          <div className="flex-1 max-w-md">
             <img 
               src="/assets/logos/logo-congreso.png" 
               alt="1er Congreso Internacional de Integración Científica" 
-              className="h-16 sm:h-20 w-auto object-contain drop-shadow-2xs"
+              className="h-22 sm:h-26 w-auto object-contain drop-shadow-2xs"
               crossOrigin="anonymous"
             />
           </div>
 
-          {/* Right: Career & Program Badge */}
-          <div className="flex flex-col items-end justify-center">
-            <span className="inline-block px-5 py-1 rounded-full bg-[#F05023] text-white text-xs sm:text-sm font-black tracking-widest uppercase shadow-xs mb-1">
+          {/* Right: Career & Program Badge (Centered with flex to prevent offset) */}
+          <div className="flex flex-col items-end justify-center flex-shrink-0">
+            <div className="h-7 px-5 rounded-full bg-[#F05023] text-white text-xs font-black tracking-widest uppercase flex items-center justify-center leading-none shadow-xs mb-1.5">
               PROGRAMA
-            </span>
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 uppercase">
+            </div>
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 uppercase leading-none">
               {careerTitle}
             </h2>
           </div>
         </header>
 
-        {/* PRE-CONGRESS NOTE (If applicable, e.g. Prótesis Dental on Nov 11) */}
+        {/* MIDDLE: PRE-CONGRESS (If applicable) */}
         {wednesdaySessions.length > 0 && (
-          <div className="my-4 p-3 rounded-xl bg-amber-50/80 backdrop-blur-xs border border-amber-200 shadow-2xs">
-            <h3 className="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+          <div className="my-3 p-3 rounded-xl bg-amber-50/80 backdrop-blur-xs border border-amber-200 shadow-2xs flex-shrink-0">
+            <h3 className="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-amber-600"></span>
               Pre-Congreso · Miércoles 11 de Noviembre
             </h3>
@@ -203,35 +203,35 @@ export default function BrochurePrintView({ congressData }) {
           </div>
         )}
 
-        {/* 2-COLUMN CONGRESS DAYS LAYOUT (Always side-by-side) */}
-        <div className="relative z-10 grid grid-cols-2 gap-4 sm:gap-6 mt-4">
+        {/* MIDDLE: 2-COLUMN CONGRESS DAYS LAYOUT */}
+        <div className="relative z-10 grid grid-cols-2 gap-4 sm:gap-6 my-4 flex-1">
           {/* COLUMN 1: JUEVES 12 */}
           <section className="flex flex-col">
             {/* Column Header Pills */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-20 text-center py-1 px-2.5 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs">
+              <div className="w-20 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
                 HORA
-              </span>
-              <span className="flex-1 text-center py-1 px-3 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs">
+              </div>
+              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
                 JUEVES 12
-              </span>
+              </div>
             </div>
 
             {/* Thursday Sessions Timeline */}
-            <div className="space-y-2.5 flex-1">
+            <div className="space-y-2 flex-1">
               {thursdaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
                   No hay actividades para esta carrera el día jueves.
                 </div>
               ) : (
                 thursdaySessions.map((session) => (
-                  <div key={session.id} className="flex items-start gap-2">
+                  <div key={session.id} className="timeline-row flex items-start gap-2">
                     {/* Time Slot on Left */}
                     <div className="w-20 flex-shrink-0 pt-1.5 text-right">
-                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block">
+                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block leading-tight">
                         {session.start} - {session.end}
                       </span>
-                      <div className="w-full border-b border-dashed border-slate-300 mt-1.5"></div>
+                      <div className="w-full border-b border-dashed border-slate-300 mt-1"></div>
                     </div>
 
                     {/* Card on Right */}
@@ -252,29 +252,29 @@ export default function BrochurePrintView({ congressData }) {
           <section className="flex flex-col">
             {/* Column Header Pills */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-20 text-center py-1 px-2.5 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs">
+              <div className="w-20 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
                 HORA
-              </span>
-              <span className="flex-1 text-center py-1 px-3 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs">
+              </div>
+              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
                 VIERNES 13
-              </span>
+              </div>
             </div>
 
             {/* Friday Sessions Timeline */}
-            <div className="space-y-2.5 flex-1">
+            <div className="space-y-2 flex-1">
               {fridaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
                   No hay actividades para esta carrera el día viernes.
                 </div>
               ) : (
                 fridaySessions.map((session) => (
-                  <div key={session.id} className="flex items-start gap-2">
+                  <div key={session.id} className="timeline-row flex items-start gap-2">
                     {/* Time Slot on Left */}
                     <div className="w-20 flex-shrink-0 pt-1.5 text-right">
-                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block">
+                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block leading-tight">
                         {session.start} - {session.end}
                       </span>
-                      <div className="w-full border-b border-dashed border-slate-300 mt-1.5"></div>
+                      <div className="w-full border-b border-dashed border-slate-300 mt-1"></div>
                     </div>
 
                     {/* Card on Right */}
@@ -292,10 +292,10 @@ export default function BrochurePrintView({ congressData }) {
           </section>
         </div>
 
-        {/* FOOTER SECTION (Institutional logos & co-organizers from public/assets/logos/) */}
-        <footer className="relative z-10 mt-6 pt-3.5 border-t-2 border-slate-200/80 flex items-center justify-between gap-4">
+        {/* BOTTOM: FOOTER SECTION (Always pinned to bottom of A4) */}
+        <footer className="relative z-10 mt-4 pt-3 border-t-2 border-slate-200/80 flex items-center justify-between gap-4 flex-shrink-0">
           {/* Organiza: UNIOR Official Logo */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2">
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
               Organiza:
             </span>
@@ -312,25 +312,25 @@ export default function BrochurePrintView({ congressData }) {
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mr-1 hidden sm:inline">
               Con el apoyo de:
             </span>
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3">
               <img 
                 src="/assets/logos/gador.png" 
                 alt="Gobierno Autónomo Departamental de Oruro" 
-                className="h-7 sm:h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain"
                 title="Gobierno Autónomo Departamental de Oruro"
                 crossOrigin="anonymous"
               />
               <img 
                 src="/assets/logos/gador-secretaria-cultura.png" 
                 alt="Cultura y Turismo Oruro" 
-                className="h-7 sm:h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain"
                 title="Cultura y Turismo Oruro"
                 crossOrigin="anonymous"
               />
               <img 
                 src="/assets/logos/gamo.png" 
                 alt="Gobierno Autónomo Municipal de Oruro" 
-                className="h-7 sm:h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain"
                 title="Gobierno Autónomo Municipal de Oruro"
                 crossOrigin="anonymous"
               />

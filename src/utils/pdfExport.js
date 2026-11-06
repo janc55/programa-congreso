@@ -3,16 +3,15 @@ import html2canvas from 'html2canvas';
 
 /**
  * Exports a DOM element directly to a high-resolution A4 PDF document.
- * @param {HTMLElement} element - The DOM element to capture (e.g. brochure container)
+ * @param {HTMLElement} element - The DOM element to capture (#brochure-container)
  * @param {string} filename - The output PDF filename
- * @param {object} options - Configuration options
  */
-export async function exportElementToA4PDF(element, filename = 'Programa_Congreso_UNIOR.pdf', options = {}) {
+export async function exportElementToA4PDF(element, filename = 'Programa_Congreso_UNIOR.pdf') {
   if (!element) {
     throw new Error('Element to export was not found');
   }
 
-  // Create loading indicator or notify
+  // Visual feedback toast
   const toast = document.createElement('div');
   toast.id = 'pdf-export-toast';
   toast.className = 'fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-3 border border-slate-700 animate-in fade-in';
@@ -21,24 +20,27 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>
-    <span>Generando PDF A4 de alta fidelidad...</span>
+    <span>Generando folleto oficial A4 en alta resolución...</span>
   `;
   document.body.appendChild(toast);
 
+  // Wait for fonts to be completely ready before capturing
+  if (document.fonts && document.fonts.ready) {
+    await document.fonts.ready;
+  }
+
   try {
-    // Capture element with html2canvas with high scale for 300 DPI quality
+    // Capture with html2canvas at 2.5x retina resolution
     const canvas = await html2canvas(element, {
-      scale: 2.5, // Crisp 2.5x retina/print resolution
+      scale: 2.5,
       useCORS: true,
       allowTaint: true,
       logging: false,
       backgroundColor: '#ffffff',
-      windowWidth: element.scrollWidth,
-      windowHeight: element.scrollHeight,
       onclone: (clonedDoc) => {
         const clonedElement = clonedDoc.querySelector('#brochure-container');
         if (clonedElement) {
-          // Remove rounded outer corners and box shadow for clean bleed
+          // Flatten borders and shadows for clean bleed
           clonedElement.style.borderRadius = '0px';
           clonedElement.style.boxShadow = 'none';
           clonedElement.style.margin = '0px';
@@ -47,14 +49,14 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       }
     });
 
-    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    const imgData = canvas.toDataURL('image/jpeg', 0.96);
 
-    // Standard A4 dimensions in mm: 210 x 297
+    // Standard A4 dimensions in mm
     const a4Width = 210;
     const a4Height = 297;
 
-    const imgWidth = a4Width;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    // Calculate height proportional to A4 width
+    const calculatedHeight = (canvas.height * a4Width) / canvas.width;
 
     const pdf = new jsPDF({
       orientation: 'portrait',
@@ -63,23 +65,23 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       compress: true
     });
 
-    // If the image fits within a single A4 page or is close, fit on 1 page
-    if (imgHeight <= a4Height + 15) {
-      pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, Math.min(imgHeight, a4Height), '', 'FAST');
+    // If it's a single page (within tolerance of A4), stretch/fit cleanly to exact A4
+    if (calculatedHeight <= a4Height + 20) {
+      // Force 100% full bleed of the A4 page (0 white margins top, bottom, left, right)
+      pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, a4Height, undefined, 'FAST');
     } else {
       // Multi-page slicing for longer agendas (e.g. Programa General)
-      let heightLeft = imgHeight;
+      let heightLeft = calculatedHeight;
       let position = 0;
 
       // First page
-      pdf.addImage(imgData, 'JPEG', 0, position, a4Width, imgHeight, '', 'FAST');
+      pdf.addImage(imgData, 'JPEG', 0, position, a4Width, calculatedHeight, undefined, 'FAST');
       heightLeft -= a4Height;
 
-      // Subsequent pages
       while (heightLeft > 0) {
         position -= a4Height;
         pdf.addPage('a4', 'portrait');
-        pdf.addImage(imgData, 'JPEG', 0, position, a4Width, imgHeight, '', 'FAST');
+        pdf.addImage(imgData, 'JPEG', 0, position, a4Width, calculatedHeight, undefined, 'FAST');
         heightLeft -= a4Height;
       }
     }
