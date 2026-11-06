@@ -215,6 +215,10 @@ export default function BrochurePrintView({ congressData }) {
         </div>
       </div>
 
+      <p className="no-print md:hidden text-[11px] text-slate-500 text-center mb-3">
+        Vista adaptada para móvil. La imagen descargada conserva el formato A4 de dos columnas.
+      </p>
+
       {/* BROCHURE SHEET CANVAS (Calibrated A4 Proportions: 794px x 1123px) */}
       <div
         ref={brochureRef}
@@ -267,7 +271,7 @@ export default function BrochurePrintView({ congressData }) {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
               Pre-Congreso · Miércoles 11 de Noviembre
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="brochure-precongress-grid grid grid-cols-2 gap-2">
               {wednesdaySessions.map((session) => (
                 <div key={session.id} className="flex gap-2 items-center">
                   <span className="text-[10px] font-bold text-slate-700 whitespace-nowrap">{session.start} - {session.end}</span>
@@ -281,7 +285,7 @@ export default function BrochurePrintView({ congressData }) {
         )}
 
         {/* MIDDLE: 2-COLUMN CONGRESS DAYS LAYOUT */}
-        <div className="relative z-10 grid grid-cols-2 gap-3.5 my-3 flex-1">
+        <div className="brochure-days-grid relative z-10 grid grid-cols-2 gap-3.5 my-3 flex-1">
           {/* COLUMN 1: JUEVES 12 */}
           <section className="flex flex-col">
             {/* Column Header Pills */}
@@ -370,7 +374,7 @@ export default function BrochurePrintView({ congressData }) {
         </div>
 
         {/* BOTTOM: FOOTER SECTION (Always pinned to bottom of A4) */}
-        <footer className="relative z-10 mt-2 pt-2.5 border-t border-slate-200 flex items-center justify-between gap-4 flex-shrink-0">
+        <footer className="brochure-footer relative z-10 mt-2 pt-2.5 border-t border-slate-200 flex items-center justify-between gap-4 flex-shrink-0">
           {/* Organiza: UNIOR Official Logo */}
           <div className="flex items-center gap-2">
             <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-500">
@@ -388,7 +392,7 @@ export default function BrochurePrintView({ congressData }) {
             <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-500 mr-1 hidden sm:inline">
               Con el apoyo de:
             </span>
-            <div className="flex items-center gap-2.5">
+            <div className="brochure-partners flex items-center gap-2.5">
               <img
                 src="/assets/logos/gador.png"
                 alt="Gobierno Autónomo Departamental de Oruro"

@@ -20,6 +20,24 @@
   opacity: 0.06 !important;
 }
 
+@media screen and (max-width: 767px) {
+  body:not(.pdf-export-mode) .brochure-days-grid,
+  body:not(.pdf-export-mode) .brochure-precongress-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body:not(.pdf-export-mode) .brochure-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  body:not(.pdf-export-mode) .brochure-partners {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 @media print {
   @page {
     size: A4 portrait;
