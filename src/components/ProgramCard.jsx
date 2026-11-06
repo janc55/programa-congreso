@@ -2,10 +2,10 @@ import React from 'react';
 import SpeakerAvatar from './SpeakerAvatar';
 
 const SALA_COLORS = {
-  1: { bg: 'bg-amber-500', text: 'text-white', border: 'border-amber-600' }, // Sala 1 (Subterráneo)
-  2: { bg: 'bg-purple-600', text: 'text-white', border: 'border-purple-700' }, // Sala 2 (Piso 2)
-  3: { bg: 'bg-sky-600', text: 'text-white', border: 'border-sky-700' },      // Sala 3 (Piso 6)
-  4: { bg: 'bg-blue-600', text: 'text-white', border: 'border-blue-700' },     // Sala 4 (Piso 7)
+  1: { bg: 'bg-amber-500', text: 'text-white' }, // Sala 1 (Subterráneo)
+  2: { bg: 'bg-purple-600', text: 'text-white' }, // Sala 2 (Piso 2)
+  3: { bg: 'bg-sky-600', text: 'text-white' },      // Sala 3 (Piso 6)
+  4: { bg: 'bg-blue-600', text: 'text-white' },     // Sala 4 (Piso 7)
 };
 
 export default function ProgramCard({ session, salas, careers }) {
@@ -16,14 +16,14 @@ export default function ProgramCard({ session, salas, careers }) {
   // Sala label
   const salaNum = session.sala;
   const salaInfo = salaNum ? salas[salaNum] : null;
-  const salaStyle = salaNum ? SALA_COLORS[salaNum] : { bg: 'bg-slate-700', text: 'text-white', border: 'border-slate-800' };
+  const salaStyle = salaNum ? SALA_COLORS[salaNum] : { bg: 'bg-slate-700', text: 'text-white' };
 
   return (
-    <article className="session-card relative bg-white rounded-xl border border-slate-200/90 shadow-xs hover:shadow-sm transition-all p-3 flex gap-3 items-start overflow-hidden">
+    <article className="session-card relative bg-white/95 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-xs transition-all p-2.5 flex gap-2.5 items-start overflow-hidden">
       {/* Career color accent line on the left */}
       {session.careers?.length > 0 && (
         <div 
-          className="absolute left-0 top-0 bottom-0 w-1.5"
+          className="absolute left-0 top-0 bottom-0 w-1"
           style={{ 
             backgroundColor: session.careers[0] && careers[session.careers[0]] 
               ? `#${careers[session.careers[0]].color}` 
@@ -36,7 +36,7 @@ export default function ProgramCard({ session, salas, careers }) {
       {/* Main content */}
       <div className="flex-1 min-w-0 pl-1">
         {/* Speaker Name / Title */}
-        <h4 className="font-bold text-slate-900 text-[13px] leading-snug line-clamp-2">
+        <h4 className="font-bold text-slate-900 text-[12px] leading-snug line-clamp-2">
           {isQA ? (
             <span className="text-slate-700 font-semibold">
               Preguntas y respuestas
@@ -51,7 +51,7 @@ export default function ProgramCard({ session, salas, careers }) {
 
         {/* Topic / Description */}
         {session.topic && (
-          <p className="text-[11.5px] text-slate-600 font-normal mt-0.5 leading-snug line-clamp-2">
+          <p className="text-[10.5px] text-slate-600 font-normal mt-0.5 leading-snug line-clamp-2">
             {isWorkshop && <span className="font-semibold text-teal-700">Workshop: </span>}
             {isPlenary && <span className="font-semibold text-rose-700">Plenaria: </span>}
             {session.topic}
@@ -59,42 +59,42 @@ export default function ProgramCard({ session, salas, careers }) {
         )}
 
         {/* Badges row */}
-        <div className="flex flex-wrap items-center gap-1.5 mt-2">
+        <div className="flex flex-wrap items-center gap-1 mt-1.5">
           {/* Sala Badge */}
           {salaNum ? (
             <span 
-              className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide ${salaStyle.bg} ${salaStyle.text}`}
+              className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold tracking-wide ${salaStyle.bg} ${salaStyle.text}`}
               title={salaInfo || `Sala ${salaNum}`}
             >
               Sala {salaNum}
             </span>
           ) : session.room ? (
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-200 text-slate-800">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold bg-slate-200 text-slate-800">
               {session.room}
             </span>
           ) : null}
 
           {/* Modality Badge */}
           {session.virtual ? (
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-pink-600 text-white">
               Virtual{session.country ? ` (${session.country})` : ''}
             </span>
           ) : (
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500 text-white">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold bg-emerald-500 text-white">
               Presencial
             </span>
           )}
 
           {/* Workshop Badge */}
           {isWorkshop && (
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-teal-500 text-white">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold bg-teal-500 text-white">
               Workshop
             </span>
           )}
 
           {/* Extra Modality Note */}
           {session.mod && !isWorkshop && (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-xs text-[10px] text-slate-500 bg-slate-100">
+            <span className="inline-flex items-center px-1 py-0.5 rounded-xs text-[9px] text-slate-500 bg-slate-100">
               {session.mod}
             </span>
           )}
@@ -117,4 +117,3 @@ export default function ProgramCard({ session, salas, careers }) {
     </article>
   );
 }
-

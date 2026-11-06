@@ -11,17 +11,17 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
   const flagCode = COUNTRY_FLAG_MAP[countryKey] || 'bo';
 
   const sizeClasses = {
-    sm: 'w-9 h-9 text-xs',
-    md: 'w-14 h-14 text-sm',
-    lg: 'w-20 h-20 text-base',
-    xl: 'w-24 h-24 text-lg'
+    sm: 'w-8 h-8 text-xs',
+    md: 'w-12 h-12 text-sm',
+    lg: 'w-16 h-16 text-base',
+    xl: 'w-20 h-20 text-lg'
   };
 
   const flagSizes = {
-    sm: 'text-[9px] -bottom-0.5 -right-0.5',
-    md: 'text-[12px] -bottom-1 -right-1',
-    lg: 'text-[16px] -bottom-1 -right-1',
-    xl: 'text-[18px] -bottom-1 -right-1'
+    sm: 'w-4 h-3 -bottom-0.5 -right-0.5',
+    md: 'w-5 h-3.5 -bottom-1 -right-1',
+    lg: 'w-6 h-4.5 -bottom-1 -right-1',
+    xl: 'w-7 h-5 -bottom-1 -right-1'
   };
 
   // Determine initial photo source
@@ -32,7 +32,6 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
 
   const handleImageError = () => {
     if (mappedFile) {
-      // If mapped file failed, don't keep looping
       setHasError(true);
     } else if (extIndex < extensions.length - 1) {
       setExtIndex(extIndex + 1);
@@ -45,7 +44,7 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
     <div className={`relative inline-block flex-shrink-0 select-none ${className}`}>
       {/* Photo Container */}
       <div 
-        className={`${sizeClasses[size] || sizeClasses.md} rounded-xl overflow-hidden border-2 border-white/90 bg-slate-100 flex items-center justify-center shadow-xs transition-transform hover:scale-105`}
+        className={`${sizeClasses[size] || sizeClasses.md} rounded-xl overflow-hidden border-2 border-white/90 bg-slate-100 flex items-center justify-center shadow-xs`}
         title={speaker?.n || 'Expositor'}
       >
         {!hasError && photoUrl ? (
@@ -54,7 +53,7 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
             alt={speaker?.n || 'Expositor'}
             onError={handleImageError}
             className="w-full h-full object-cover object-top"
-            loading="lazy"
+            crossOrigin="anonymous"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 text-slate-400">
@@ -71,7 +70,10 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
           className={`absolute ${flagSizes[size] || flagSizes.md} rounded-[2px] overflow-hidden shadow-xs border border-white bg-white flex items-center justify-center leading-none`}
           title={`País: ${country || 'Bolivia'}`}
         >
-          <span className={`fi fi-${flagCode} rounded-[1px]`} />
+          <span 
+            className={`fi fi-${flagCode} rounded-[1px] w-full h-full block`} 
+            style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
+          />
         </div>
       )}
     </div>

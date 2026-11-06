@@ -1,15 +1,17 @@
 @media print {
   @page {
-    size: letter portrait;
-    margin: 8mm 8mm 8mm 8mm;
+    size: A4 portrait;
+    margin: 0; /* Zero margins for full-bleed background */
   }
 
-  body {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
     background: #ffffff !important;
     color: #0f172a !important;
-    font-size: 11pt;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 
   .no-print {
@@ -20,22 +22,30 @@
     display: block !important;
   }
 
-  /* Prevent card splitting across page breaks */
-  .session-card,
-  .break-banner {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-
-  /* High fidelity print containers */
+  /* Full bleed brochure container in A4 */
+  #brochure-container,
   .brochure-container {
     box-shadow: none !important;
     border: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    background: transparent !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+    padding: 12mm 12mm !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    box-sizing: border-box !important;
+    background-image: url('/assets/watermarks/fondo-gris.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent awkward splits */
+  .session-card,
+  .break-banner,
+  header,
+  footer {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 }
-
