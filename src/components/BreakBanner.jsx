@@ -5,7 +5,7 @@ export default function BreakBanner({ title, notes = [] }) {
   const isCeremony = title?.toLowerCase().includes('inaugur') || title?.toLowerCase().includes('clausura');
 
   return (
-    <div className={`break-banner w-full text-center py-2 px-3 rounded-xl border text-[12px] font-semibold transition-all ${
+    <div className={`break-banner w-full text-center py-1.5 px-2.5 rounded-lg border text-[11px] font-semibold transition-all ${
       isLunch 
         ? 'bg-amber-50/80 border-amber-200 text-amber-900' 
         : isCeremony
@@ -14,7 +14,7 @@ export default function BreakBanner({ title, notes = [] }) {
     }`}>
       <div>{title}</div>
       {notes?.length > 0 && (
-        <div className="text-[10px] font-normal text-slate-500 mt-0.5">
+        <div className="text-[9.5px] font-normal text-slate-500 mt-0.5">
           {notes.join(' · ')}
         </div>
       )}

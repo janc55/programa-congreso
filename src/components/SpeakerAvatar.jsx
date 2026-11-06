@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
-import { SPEAKER_PHOTO_MAP, COUNTRY_FLAG_MAP } from '../data/speakerPhotos';
+import { SPEAKER_PHOTO_MAP, getCountryFlagPath } from '../data/speakerPhotos';
 
 export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag = true, className = '' }) {
   const [extIndex, setExtIndex] = useState(0);
   const [hasError, setHasError] = useState(false);
   const extensions = ['jpg', 'jpeg', 'png', 'webp'];
 
-  // Resolve country ISO code for flag-icons
-  const countryKey = (country || 'bolivia').toLowerCase().trim();
-  const flagCode = COUNTRY_FLAG_MAP[countryKey] || 'bo';
+  const flagSrc = getCountryFlagPath(country);
 
   const sizeClasses = {
-    sm: 'w-8 h-8 text-xs',
-    md: 'w-11 h-11 text-sm',
-    lg: 'w-16 h-16 text-base',
-    xl: 'w-20 h-20 text-lg'
+    sm: 'w-7 h-7',
+    md: 'w-10 h-10',
+    lg: 'w-14 h-14',
+    xl: 'w-18 h-18'
   };
 
   const flagSizes = {
-    sm: 'w-4 h-2.5 -bottom-0.5 -right-0.5',
-    md: 'w-5 h-3.5 -bottom-0.5 -right-0.5',
-    lg: 'w-6 h-4.5 -bottom-1 -right-1',
-    xl: 'w-7 h-5 -bottom-1 -right-1'
+    sm: 'w-3.5 h-2.5 -bottom-0.5 -right-0.5',
+    md: 'w-4.5 h-3 -bottom-0.5 -right-0.5',
+    lg: 'w-5.5 h-4 -bottom-1 -right-1',
+    xl: 'w-6.5 h-4.5 -bottom-1 -right-1'
   };
 
-  // Determine initial photo source
   const mappedFile = speaker?.s ? SPEAKER_PHOTO_MAP[speaker.s] : null;
   const photoUrl = mappedFile 
     ? `/assets/fotos/${mappedFile}` 
@@ -44,7 +41,7 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
     <div className={`relative inline-block flex-shrink-0 select-none ${className}`}>
       {/* Photo Container */}
       <div 
-        className={`${sizeClasses[size] || sizeClasses.md} rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 flex items-center justify-center shadow-2xs`}
+        className={`${sizeClasses[size] || sizeClasses.md} rounded-lg overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-center shadow-2xs`}
         title={speaker?.n || 'Expositor'}
       >
         {!hasError && photoUrl ? (
@@ -53,7 +50,6 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
             alt={speaker?.n || 'Expositor'}
             onError={handleImageError}
             className="w-full h-full object-cover object-top"
-            crossOrigin="anonymous"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 text-slate-400">
@@ -64,17 +60,16 @@ export default function SpeakerAvatar({ speaker, country, size = 'md', showFlag 
         )}
       </div>
 
-      {/* Flag Badge using official flag-icons SVGs as <img> for perfect PDF rendering */}
-      {showFlag && flagCode && (
+      {/* Flag Badge using official user PNG */}
+      {showFlag && flagSrc && (
         <div 
-          className={`absolute ${flagSizes[size] || flagSizes.md} rounded-[2px] overflow-hidden shadow-xs border border-white bg-white flex items-center justify-center leading-none z-10`}
+          className={`absolute ${flagSizes[size] || flagSizes.md} rounded-[1px] overflow-hidden shadow-xs border border-white bg-white flex items-center justify-center leading-none z-10`}
           title={`País: ${country || 'Bolivia'}`}
         >
           <img 
-            src={`/assets/flags/${flagCode}.svg`} 
+            src={flagSrc} 
             alt={country || 'Bolivia'}
             className="w-full h-full object-cover"
-            crossOrigin="anonymous"
           />
         </div>
       )}

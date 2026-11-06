@@ -12,10 +12,8 @@ export default function BrochurePrintView({ congressData }) {
   const [isExporting, setIsExporting] = useState(false);
   const brochureRef = useRef(null);
 
-  // Common general types
   const GENERAL_KINDS = ['registro', 'acto', 'plenaria', 'almuerzo'];
 
-  // Filter sessions for the selected career
   const filterSessionsByDay = (dayId) => {
     return sessions.filter((s) => {
       if (s.day !== dayId) return false;
@@ -142,11 +140,11 @@ export default function BrochurePrintView({ congressData }) {
         </div>
       </div>
 
-      {/* BROCHURE SHEET CANVAS (Fixed A4 proportions with full cover background) */}
+      {/* BROCHURE SHEET CANVAS (Calibrated A4 Proportions: 794px x 1123px) */}
       <div 
         ref={brochureRef}
         id="brochure-container"
-        className="brochure-container relative bg-white rounded-3xl border border-slate-200 shadow-xl p-6 sm:p-8 overflow-hidden mx-auto w-full max-w-[880px] min-h-[1140px] flex flex-col justify-between"
+        className="brochure-container relative bg-white rounded-2xl border border-slate-200/90 shadow-xl p-5 sm:p-6 overflow-hidden mx-auto w-full max-w-[794px] min-h-[1123px] flex flex-col justify-between"
         style={{
           backgroundImage: `url('/assets/watermarks/fondo-gris.jpg')`,
           backgroundSize: 'cover',
@@ -156,25 +154,24 @@ export default function BrochurePrintView({ congressData }) {
       >
         {/* Watermark Coat of Arms with subtle opacity */}
         <div 
-          className="watermark-shield absolute -right-4 top-8 w-[420px] h-[480px] pointer-events-none select-none opacity-[0.07] bg-no-repeat bg-contain"
+          className="watermark-shield absolute -right-4 top-6 w-[380px] h-[440px] pointer-events-none select-none opacity-[0.06] bg-no-repeat bg-contain"
           style={{ backgroundImage: `url('/assets/watermarks/Unior Escudo Negro.png')` }}
         />
 
         {/* TOP: HEADER SECTION */}
-        <header className="relative z-10 flex items-center justify-between gap-4 pb-4 border-b-2 border-slate-200/80 flex-shrink-0">
-          {/* Left: Congress Official Logo - Prominent & Large */}
-          <div className="flex-1 max-w-md">
+        <header className="relative z-10 flex items-center justify-between gap-4 pb-3 border-b border-slate-200 flex-shrink-0">
+          {/* Left: Congress Official Logo - Balanced & Crisp */}
+          <div className="flex-1 max-w-sm">
             <img 
               src="/assets/logos/logo-congreso.png" 
               alt="1er Congreso Internacional de Integración Científica" 
-              className="h-22 sm:h-26 w-auto object-contain drop-shadow-2xs"
-              crossOrigin="anonymous"
+              className="h-16 w-auto object-contain drop-shadow-2xs"
             />
           </div>
 
           {/* Right: Career & Program Badge (Centered with flex to prevent offset) */}
           <div className="flex flex-col items-end justify-center flex-shrink-0">
-            <div className="h-7 px-5 rounded-full bg-[#F05023] text-white text-xs font-black tracking-widest uppercase flex items-center justify-center leading-none shadow-xs mb-1.5">
+            <div className="px-4 py-1 rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-widest uppercase flex items-center justify-center leading-none mb-1 shadow-2xs">
               PROGRAMA
             </div>
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 uppercase leading-none">
@@ -185,15 +182,15 @@ export default function BrochurePrintView({ congressData }) {
 
         {/* MIDDLE: PRE-CONGRESS (If applicable) */}
         {wednesdaySessions.length > 0 && (
-          <div className="my-3 p-3 rounded-xl bg-amber-50/80 backdrop-blur-xs border border-amber-200 shadow-2xs flex-shrink-0">
-            <h3 className="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+          <div className="my-2 p-2 rounded-lg bg-amber-50/80 backdrop-blur-xs border border-amber-200 shadow-2xs flex-shrink-0">
+            <h3 className="text-[10px] font-bold text-amber-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
               Pre-Congreso · Miércoles 11 de Noviembre
             </h3>
             <div className="grid grid-cols-2 gap-2">
               {wednesdaySessions.map((session) => (
                 <div key={session.id} className="flex gap-2 items-center">
-                  <span className="text-[11px] font-bold text-slate-700 whitespace-nowrap">{session.start} - {session.end}</span>
+                  <span className="text-[10px] font-bold text-slate-700 whitespace-nowrap">{session.start} - {session.end}</span>
                   <div className="flex-1">
                     <ProgramCard session={session} salas={salas} careers={careers} />
                   </div>
@@ -204,31 +201,31 @@ export default function BrochurePrintView({ congressData }) {
         )}
 
         {/* MIDDLE: 2-COLUMN CONGRESS DAYS LAYOUT */}
-        <div className="relative z-10 grid grid-cols-2 gap-4 sm:gap-6 my-4 flex-1">
+        <div className="relative z-10 grid grid-cols-2 gap-3.5 my-3 flex-1">
           {/* COLUMN 1: JUEVES 12 */}
           <section className="flex flex-col">
             {/* Column Header Pills */}
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-20 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
+            <div className="flex items-center gap-1.5 mb-2.5">
+              <div className="w-16 text-center rounded-full bg-[#F05023] text-white text-[10px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-5">
                 HORA
               </div>
-              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
+              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[10px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-5">
                 JUEVES 12
               </div>
             </div>
 
             {/* Thursday Sessions Timeline */}
-            <div className="space-y-2 flex-1">
+            <div className="space-y-1.5 flex-1">
               {thursdaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
                   No hay actividades para esta carrera el día jueves.
                 </div>
               ) : (
                 thursdaySessions.map((session) => (
-                  <div key={session.id} className="timeline-row flex items-start gap-2">
+                  <div key={session.id} className="timeline-row flex items-start gap-1.5">
                     {/* Time Slot on Left */}
-                    <div className="w-20 flex-shrink-0 pt-1.5 text-right">
-                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block leading-tight">
+                    <div className="w-16 flex-shrink-0 pt-1 text-right">
+                      <span className="text-[10px] font-bold text-slate-800 tracking-tight block leading-tight">
                         {session.start} - {session.end}
                       </span>
                       <div className="w-full border-b border-dashed border-slate-300 mt-1"></div>
@@ -251,27 +248,27 @@ export default function BrochurePrintView({ congressData }) {
           {/* COLUMN 2: VIERNES 13 */}
           <section className="flex flex-col">
             {/* Column Header Pills */}
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-20 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
+            <div className="flex items-center gap-1.5 mb-2.5">
+              <div className="w-16 text-center rounded-full bg-[#F05023] text-white text-[10px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-5">
                 HORA
               </div>
-              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[11px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-6">
+              <div className="flex-1 text-center rounded-full bg-[#F05023] text-white text-[10px] font-black tracking-wider uppercase shadow-xs flex items-center justify-center leading-none h-5">
                 VIERNES 13
               </div>
             </div>
 
             {/* Friday Sessions Timeline */}
-            <div className="space-y-2 flex-1">
+            <div className="space-y-1.5 flex-1">
               {fridaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
                   No hay actividades para esta carrera el día viernes.
                 </div>
               ) : (
                 fridaySessions.map((session) => (
-                  <div key={session.id} className="timeline-row flex items-start gap-2">
+                  <div key={session.id} className="timeline-row flex items-start gap-1.5">
                     {/* Time Slot on Left */}
-                    <div className="w-20 flex-shrink-0 pt-1.5 text-right">
-                      <span className="text-[11px] font-bold text-slate-800 tracking-tight block leading-tight">
+                    <div className="w-16 flex-shrink-0 pt-1 text-right">
+                      <span className="text-[10px] font-bold text-slate-800 tracking-tight block leading-tight">
                         {session.start} - {session.end}
                       </span>
                       <div className="w-full border-b border-dashed border-slate-300 mt-1"></div>
@@ -293,53 +290,48 @@ export default function BrochurePrintView({ congressData }) {
         </div>
 
         {/* BOTTOM: FOOTER SECTION (Always pinned to bottom of A4) */}
-        <footer className="relative z-10 mt-4 pt-3 border-t-2 border-slate-200/80 flex items-center justify-between gap-4 flex-shrink-0">
+        <footer className="relative z-10 mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between gap-4 flex-shrink-0">
           {/* Organiza: UNIOR Official Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-500">
               Organiza:
             </span>
             <img 
               src="/assets/logos/unior-logo.png" 
               alt="UNIOR - Universidad Privada de Oruro" 
-              className="h-8 sm:h-9 w-auto object-contain"
-              crossOrigin="anonymous"
+              className="h-7 w-auto object-contain"
             />
           </div>
 
           {/* Con el apoyo de: Partners Official Logos */}
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mr-1 hidden sm:inline">
+            <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-500 mr-1 hidden sm:inline">
               Con el apoyo de:
             </span>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5">
               <img 
                 src="/assets/logos/gador.png" 
                 alt="Gobierno Autónomo Departamental de Oruro" 
-                className="h-7 w-auto object-contain"
+                className="h-6 w-auto object-contain"
                 title="Gobierno Autónomo Departamental de Oruro"
-                crossOrigin="anonymous"
               />
               <img 
                 src="/assets/logos/gador-secretaria-cultura.png" 
                 alt="Cultura y Turismo Oruro" 
-                className="h-7 w-auto object-contain"
+                className="h-6 w-auto object-contain"
                 title="Cultura y Turismo Oruro"
-                crossOrigin="anonymous"
               />
               <img 
                 src="/assets/logos/gamo.png" 
                 alt="Gobierno Autónomo Municipal de Oruro" 
-                className="h-7 w-auto object-contain"
+                className="h-6 w-auto object-contain"
                 title="Gobierno Autónomo Municipal de Oruro"
-                crossOrigin="anonymous"
               />
               <img 
                 src="/assets/logos/gamo-secretaria-cultura.png" 
                 alt="Secretaría Municipal de Cultura" 
-                className="h-5 sm:h-6 w-auto object-contain"
+                className="h-5 w-auto object-contain"
                 title="Secretaría Municipal de Cultura"
-                crossOrigin="anonymous"
               />
             </div>
           </div>

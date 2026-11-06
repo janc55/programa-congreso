@@ -13,17 +13,16 @@ export default function ProgramCard({ session, salas, careers }) {
   const isWorkshop = session.kind === 'workshop';
   const isPlenary = session.kind === 'plenaria';
 
-  // Sala label
   const salaNum = session.sala;
   const salaInfo = salaNum ? salas[salaNum] : null;
   const salaStyle = salaNum ? SALA_COLORS[salaNum] : { bg: 'bg-slate-700', text: 'text-white' };
 
   return (
-    <article className="session-card relative bg-white rounded-xl border border-slate-200/90 shadow-2xs p-2.5 flex gap-2.5 items-start">
-      {/* Career color accent line on the left */}
+    <article className="session-card relative bg-white/95 rounded-lg border border-slate-200/90 shadow-2xs px-2.5 py-1.5 flex gap-2 items-center justify-between">
+      {/* Left career accent line */}
       {session.careers?.length > 0 && (
         <div 
-          className="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl"
+          className="absolute left-0 top-0 bottom-0 w-1 rounded-l-lg"
           style={{ 
             backgroundColor: session.careers[0] && careers[session.careers[0]] 
               ? `#${careers[session.careers[0]].color}` 
@@ -33,10 +32,9 @@ export default function ProgramCard({ session, salas, careers }) {
         />
       )}
 
-      {/* Main content - No line-clamp to prevent html2canvas text-clipping bugs */}
+      {/* Main info */}
       <div className="flex-1 min-w-0 pl-1">
-        {/* Speaker Name / Title */}
-        <h4 className="font-bold text-slate-900 text-[11.5px] leading-normal block">
+        <h4 className="font-bold text-slate-900 text-[11px] leading-tight block">
           {isQA ? (
             <span className="text-slate-700 font-semibold">
               Preguntas y respuestas
@@ -49,59 +47,53 @@ export default function ProgramCard({ session, salas, careers }) {
           )}
         </h4>
 
-        {/* Topic / Description */}
         {session.topic && (
-          <p className="text-[10px] text-slate-600 font-normal leading-normal mt-0.5 block">
+          <p className="text-[9.5px] text-slate-600 font-normal leading-tight mt-0.5 block">
             {isWorkshop && <span className="font-semibold text-teal-700">Workshop: </span>}
             {isPlenary && <span className="font-semibold text-rose-700">Plenaria: </span>}
             {session.topic}
           </p>
         )}
 
-        {/* Badges row */}
-        <div className="flex flex-wrap items-center gap-1 mt-1.5">
-          {/* Sala Badge */}
+        <div className="flex flex-wrap items-center gap-1 mt-1">
           {salaNum ? (
             <span 
-              className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold tracking-wide leading-none ${salaStyle.bg} ${salaStyle.text}`}
+              className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[8.5px] font-bold leading-none ${salaStyle.bg} ${salaStyle.text}`}
               title={salaInfo || `Sala ${salaNum}`}
             >
               Sala {salaNum}
             </span>
           ) : session.room ? (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold leading-none bg-slate-200 text-slate-800">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8.5px] font-semibold leading-none bg-slate-200 text-slate-800">
               {session.room}
             </span>
           ) : null}
 
-          {/* Modality Badge */}
           {session.virtual ? (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold leading-none bg-pink-600 text-white">
-              Virtual{session.country ? ` (${session.country})` : ''}
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8.5px] font-bold leading-none bg-pink-600 text-white">
+              Virtual
             </span>
           ) : (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold leading-none bg-emerald-500 text-white">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8.5px] font-semibold leading-none bg-emerald-500 text-white">
               Presencial
             </span>
           )}
 
-          {/* Workshop Badge */}
           {isWorkshop && (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-semibold leading-none bg-teal-500 text-white">
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[8.5px] font-semibold leading-none bg-teal-500 text-white">
               Workshop
             </span>
           )}
 
-          {/* Extra Modality Note */}
           {session.mod && !isWorkshop && (
-            <span className="inline-flex items-center px-1 py-0.5 rounded-xs text-[9px] leading-none text-slate-500 bg-slate-100">
+            <span className="inline-flex items-center px-1 py-0.5 rounded-xs text-[8.5px] leading-none text-slate-500 bg-slate-100">
               {session.mod}
             </span>
           )}
         </div>
       </div>
 
-      {/* Speaker Avatar on the right */}
+      {/* Speaker Avatar */}
       {!isQA && session.speakers?.length > 0 && (
         <div className="flex flex-col gap-1 items-center justify-center flex-shrink-0">
           {session.speakers.map((sp, idx) => (

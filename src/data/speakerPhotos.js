@@ -30,18 +30,13 @@ export const SPEAKER_PHOTO_MAP = {
   'hans-v-kukok-montoya': 'hans-kukoc.jpeg'
 };
 
-export const COUNTRY_FLAG_MAP = {
-  'bolivia': 'bo',
-  'brasil': 'br',
-  'brazil': 'br',
-  'chile': 'cl',
-  'paraguay': 'py',
-  'peru': 'pe',
-  'perú': 'pe',
-  'argentina': 'ar',
-  'colombia': 'co',
-  'mexico': 'mx',
-  'méxico': 'mx',
-  'españa': 'es'
+// Direct mapping to the user's PNG flag files in /assets/flags/
+export const getCountryFlagPath = (country) => {
+  const c = (country || 'bolivia').toLowerCase().trim();
+  if (c === 'brasil' || c === 'brazil') return '/assets/flags/br.png';
+  if (c === 'chile') return '/assets/flags/ch.png';
+  if (c === 'paraguay') return '/assets/flags/py.png';
+  if (c === 'peru' || c === 'perú') return '/assets/flags/pe.png';
+  if (c === 'mexico' || c === 'méxico') return '/assets/flags/mx.png';
+  return '/assets/flags/bo.png';
 };
-

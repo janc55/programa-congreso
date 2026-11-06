@@ -2,7 +2,7 @@ import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 
 /**
- * Exports a DOM element directly to a high-resolution A4 PDF document.
+ * Exports a DOM element directly to a single-page full-bleed A4 PDF document.
  * @param {HTMLElement} element - The DOM element to capture (#brochure-container)
  * @param {string} filename - The output PDF filename
  */
@@ -20,19 +20,18 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>
-    <span>Generando folleto oficial A4 en alta resolución...</span>
+    <span>Generando folleto A4 oficial...</span>
   `;
   document.body.appendChild(toast);
 
-  // Wait for fonts to be completely ready before capturing
   if (document.fonts && document.fonts.ready) {
     await document.fonts.ready;
   }
 
   try {
-    // Capture with html2canvas at 2.5x retina resolution
+    // Exact A4 dimensions at 96 DPI: 794px width, 1123px height
     const canvas = await html2canvas(element, {
-      scale: 2.5,
+      scale: 2,
       useCORS: true,
       allowTaint: true,
       logging: false,
@@ -40,23 +39,21 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       onclone: (clonedDoc) => {
         const clonedElement = clonedDoc.querySelector('#brochure-container');
         if (clonedElement) {
-          // Flatten borders and shadows for clean bleed
+          // Lock cloned element to exact A4 aspect ratio to prevent any stretching or distortion
+          clonedElement.style.width = '794px';
+          clonedElement.style.minHeight = '1123px';
+          clonedElement.style.height = '1123px';
+          clonedElement.style.boxSizing = 'border-box';
           clonedElement.style.borderRadius = '0px';
           clonedElement.style.boxShadow = 'none';
           clonedElement.style.margin = '0px';
           clonedElement.style.border = 'none';
+          clonedElement.style.padding = '22px 24px';
         }
       }
     });
 
     const imgData = canvas.toDataURL('image/jpeg', 0.96);
-
-    // Standard A4 dimensions in mm
-    const a4Width = 210;
-    const a4Height = 297;
-
-    // Calculate height proportional to A4 width
-    const calculatedHeight = (canvas.height * a4Width) / canvas.width;
 
     const pdf = new jsPDF({
       orientation: 'portrait',
@@ -65,27 +62,8 @@ export async function exportElementToA4PDF(element, filename = 'Programa_Congres
       compress: true
     });
 
-    // If it's a single page (within tolerance of A4), stretch/fit cleanly to exact A4
-    if (calculatedHeight <= a4Height + 20) {
-      // Force 100% full bleed of the A4 page (0 white margins top, bottom, left, right)
-      pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, a4Height, undefined, 'FAST');
-    } else {
-      // Multi-page slicing for longer agendas (e.g. Programa General)
-      let heightLeft = calculatedHeight;
-      let position = 0;
-
-      // First page
-      pdf.addImage(imgData, 'JPEG', 0, position, a4Width, calculatedHeight, undefined, 'FAST');
-      heightLeft -= a4Height;
-
-      while (heightLeft > 0) {
-        position -= a4Height;
-        pdf.addPage('a4', 'portrait');
-        pdf.addImage(imgData, 'JPEG', 0, position, a4Width, calculatedHeight, undefined, 'FAST');
-        heightLeft -= a4Height;
-      }
-    }
-
+    // Exact 1:1 placement filling the full A4 sheet (210mm x 297mm)
+    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
     pdf.save(filename);
   } finally {
     const existingToast = document.getElementById('pdf-export-toast');
