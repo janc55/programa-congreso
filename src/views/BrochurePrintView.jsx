@@ -10,20 +10,34 @@ export default function BrochurePrintView({ congressData }) {
   const [includeGeneral, setIncludeGeneral] = useState(true);
   const [includeQA, setIncludeQA] = useState(true);
   const [isExporting, setIsExporting] = useState(false);
+  const [viewMode, setViewMode] = useState('carrera'); // 'carrera' | 'sala'
+  const [selectedSala, setSelectedSala] = useState(1);
   const brochureRef = useRef(null);
 
   const GENERAL_KINDS = ['registro', 'acto', 'plenaria', 'almuerzo'];
+
+  // Metadata de salones con nombres oficiales
+  const SALA_META = {
+    1: { name: 'Paraíso',  floor: 'Subterráneo',  colorHex: '#F59E0B', btnActive: 'bg-amber-500 border-amber-500 text-white', btnIdle: 'bg-white border-amber-300 text-amber-800' },
+    2: { name: 'Ciénaga',  floor: 'Piso N° 2',    colorHex: '#9333EA', btnActive: 'bg-purple-600 border-purple-600 text-white', btnIdle: 'bg-white border-purple-300 text-purple-800' },
+    3: { name: 'Aurora',   floor: 'Piso N° 6',    colorHex: '#0284C7', btnActive: 'bg-sky-600 border-sky-600 text-white',    btnIdle: 'bg-white border-sky-300 text-sky-800' },
+    4: { name: 'Eclipse',  floor: 'Piso N° 7',    colorHex: '#2563EB', btnActive: 'bg-blue-600 border-blue-600 text-white',   btnIdle: 'bg-white border-blue-300 text-blue-800' },
+  };
 
   const filterSessionsByDay = (dayId) => {
     return sessions.filter((s) => {
       if (s.day !== dayId) return false;
       if (!includeQA && s.kind === 'qa') return false;
 
-      if (selectedCareer === 'all') return true;
+      if (viewMode === 'sala') {
+        const matchesSala = s.sala === selectedSala;
+        const isGeneral = includeGeneral && GENERAL_KINDS.includes(s.kind);
+        return matchesSala || isGeneral;
+      }
 
+      if (selectedCareer === 'all') return true;
       const matchesCareer = s.careers && s.careers.includes(selectedCareer);
       const isGeneral = includeGeneral && GENERAL_KINDS.includes(s.kind);
-
       return matchesCareer || isGeneral;
     });
   };
@@ -35,12 +49,22 @@ export default function BrochurePrintView({ congressData }) {
   const careerInfo = careers[selectedCareer];
   const careerTitle = selectedCareer === 'all' ? 'PROGRAMA GENERAL' : (careerInfo?.name?.toUpperCase() || 'PROGRAMA');
 
+  const salaMeta = SALA_META[selectedSala];
+  const salaTitle    = `SALA ${selectedSala}`;
+  const salaSubtitle = `${salaMeta?.name} · ${salaMeta?.floor} · Hotel Edén`;
+
+  const displayTitle    = viewMode === 'sala' ? salaTitle    : careerTitle;
+  const displaySubtitle = viewMode === 'sala' ? salaSubtitle : null;
+  const emptyLabel      = viewMode === 'sala' ? 'este salón' : 'esta carrera';
+
   const handleExportPDF = async () => {
     if (!brochureRef.current || isExporting) return;
     setIsExporting(true);
     try {
-      const cleanCareerName = careerTitle.replace(/[^a-zA-Z0-9]/g, '_');
-      const filename = `Programa_${cleanCareerName}_UNIOR_2026.png`;
+      const cleanName = viewMode === 'sala'
+        ? `Sala_${selectedSala}`
+        : careerTitle.replace(/[^a-zA-Z0-9]/g, '_');
+      const filename = `Programa_${cleanName}_UNIOR_2026.png`;
       await exportElementToImage(brochureRef.current, filename);
     } catch (err) {
       console.error('Error generating image:', err);
@@ -55,39 +79,93 @@ export default function BrochurePrintView({ congressData }) {
       {/* Control Bar (hidden when printing) */}
       <div className="no-print bg-white rounded-2xl border border-slate-200 shadow-xs p-4 mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          {/* Career Selector */}
+          {/* Selector de Modo: Carrera vs Sala */}
           <div>
             <label className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
               <Filter className="w-3.5 h-3.5 text-unior-wine" />
-              Seleccionar Carrera para el Folleto:
-            </label>
-            <div className="flex flex-wrap gap-1.5">
-              <button
-                onClick={() => setSelectedCareer('all')}
-                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${selectedCareer === 'all'
-                  ? 'bg-unior-wine text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
-              >
-                Todas (General)
-              </button>
-              {Object.entries(careers).map(([key, car]) => (
-                <button
-                  key={key}
-                  onClick={() => setSelectedCareer(key)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${selectedCareer === key
-                    ? 'border-slate-900 bg-slate-900 text-white shadow-xs'
-                    : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
-                    }`}
-                  style={{
-                    borderLeftColor: `#${car.color}`,
-                    borderLeftWidth: '4px'
-                  }}
+              Modo de folleto:
+              {viewMode === 'sala' && (
+                <span
+                  className="ml-1 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-[10px] font-bold normal-case tracking-normal"
+                  style={{ borderColor: salaMeta.colorHex, color: salaMeta.colorHex }}
                 >
-                  {car.name}
-                </button>
-              ))}
+                  <span
+                    className="w-2 h-2 rounded-full"
+                    style={{ backgroundColor: salaMeta.colorHex }}
+                  />
+                  Sala {selectedSala} · {salaMeta.name}
+                </span>
+              )}
+            </label>
+            <div className="flex gap-1.5 mb-3">
+              <button
+                onClick={() => setViewMode('carrera')}
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                  viewMode === 'carrera'
+                    ? 'bg-unior-wine border-unior-wine text-white shadow-xs'
+                    : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Por Carrera
+              </button>
+              <button
+                onClick={() => setViewMode('sala')}
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                  viewMode === 'sala'
+                    ? 'bg-slate-900 border-slate-900 text-white shadow-xs'
+                    : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Por Salón
+              </button>
             </div>
+
+            {/* Selector dinámico: Carreras o Salones */}
+            {viewMode === 'carrera' ? (
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => setSelectedCareer('all')}
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${selectedCareer === 'all'
+                    ? 'bg-unior-wine text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                >
+                  Todas (General)
+                </button>
+                {Object.entries(careers).map(([key, car]) => (
+                  <button
+                    key={key}
+                    onClick={() => setSelectedCareer(key)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${selectedCareer === key
+                      ? 'border-slate-900 bg-slate-900 text-white shadow-xs'
+                      : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                      }`}
+                    style={{
+                      borderLeftColor: `#${car.color}`,
+                      borderLeftWidth: '4px'
+                    }}
+                  >
+                    {car.name}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-wrap gap-1.5">
+                {Object.entries(SALA_META).map(([num, meta]) => (
+                  <button
+                    key={num}
+                    onClick={() => setSelectedSala(Number(num))}
+                    className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                      selectedSala === Number(num) ? meta.btnActive : meta.btnIdle
+                    }`}
+                  >
+                    <span className="font-black">Sala {num}</span>
+                    <span className="font-normal opacity-80"> · {meta.name}</span>
+                    <span className="font-normal opacity-60 text-[10px] ml-1">({meta.floor})</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Action & Toggle Controls */}
@@ -172,8 +250,13 @@ export default function BrochurePrintView({ congressData }) {
               PROGRAMA
             </div>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 uppercase leading-none">
-              {careerTitle}
+              {displayTitle}
             </h2>
+            {displaySubtitle && (
+              <p className="text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-wider mt-1 text-right leading-tight">
+                {displaySubtitle}
+              </p>
+            )}
           </div>
         </header>
 
@@ -215,7 +298,7 @@ export default function BrochurePrintView({ congressData }) {
             <div className="space-y-1.5 flex-1">
               {thursdaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
-                  No hay actividades para esta carrera el día jueves.
+                  No hay actividades para {emptyLabel} el día jueves.
                 </div>
               ) : (
                 thursdaySessions.map((session) => (
@@ -258,7 +341,7 @@ export default function BrochurePrintView({ congressData }) {
             <div className="space-y-1.5 flex-1">
               {fridaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
-                  No hay actividades para esta carrera el día viernes.
+                  No hay actividades para {emptyLabel} el día viernes.
                 </div>
               ) : (
                 fridaySessions.map((session) => (
