@@ -7,7 +7,7 @@ export const SPEAKER_PHOTO_MAP = {
   'eduardo-condori-aspiazu': 'eduardo-condori.jpeg',
   'marco-antonio-quelca': 'marco-quelca.png',
   'gabriel-galindo': 'gabriel-galindo.jpeg',
-  'willy-benjamin-suarez': 'willy-suarez.jpeg',
+  'willy-benjamin-suarez': 'willy-suarez.png',
   'jocelyn-chavez-farro': 'jocelyn-chavez.jpeg',
   'victor-hugo-cortes-cortes': 'victor-cortes.png',
   'yerko-paz-huet': 'yerko-paz.jpeg',
@@ -35,7 +35,10 @@ export const SPEAKER_PHOTO_MAP = {
   'jorge-eduardo-espinoza-arzabe': 'jorge-espinoza.png',
   'marco-antonio-laura-avendano': 'marco-laura.jpg',
   'rolando-manuel-barrientos-gomez': 'rolando-barrientos.jpeg',
-  'sonia-flores-mamani': 'sonia-flores.jpeg'
+  'sonia-flores-mamani': 'sonia-flores.jpeg',
+  'abrahan-salas': 'abrahan-salas.png',
+  'andres-tapia': 'andres-tapia.png',
+  'maurice-cazorla-murillo': 'maurice-cazorla.jpg'
 };
 
 // Direct mapping to the user's PNG flag files in /assets/flags/
