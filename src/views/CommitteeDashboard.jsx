@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Clock, Layers, Copy, FileSpreadsheet, CheckCircle, Info, ChevronRight } from 'lucide-react';
 import ProgramCard from '../components/ProgramCard';
+import CommitteeMesaTable from '../components/CommitteeMesaTable';
 
 export default function CommitteeDashboard({ congressData }) {
   const { congress, careers, salas, days, sessions, alerts } = congressData;
 
-  const [activeSubTab, setActiveSubTab] = useState('alerts'); // 'alerts', 'matrix', 'stats'
+  const [activeSubTab, setActiveSubTab] = useState('alerts'); // 'alerts', 'matrix', 'program'
   const [selectedDay, setSelectedDay] = useState('all');
   const [copiedToast, setCopiedToast] = useState(false);
 
@@ -169,6 +170,16 @@ export default function CommitteeDashboard({ congressData }) {
           >
             Matriz de Salas en Paralelo
           </button>
+          <button
+            onClick={() => setActiveSubTab('program')}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              activeSubTab === 'program'
+                ? 'bg-slate-900 text-white shadow-xs'
+                : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+            }`}
+          >
+            Programa y Mesas
+          </button>
         </div>
 
         {/* Day Filter */}
@@ -310,6 +321,17 @@ export default function CommitteeDashboard({ congressData }) {
             );
           })}
         </div>
+      )}
+
+      {/* SUBTAB 3: PROGRAM WITH MESA INFO */}
+      {activeSubTab === 'program' && (
+        <CommitteeMesaTable
+          sessions={sessions}
+          days={days}
+          salas={salas}
+          careers={careers}
+          selectedDay={selectedDay}
+        />
       )}
     </div>
   );
