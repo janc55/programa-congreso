@@ -7,7 +7,7 @@ export const SPEAKER_PHOTO_MAP = {
   'eduardo-condori-aspiazu': 'eduardo-condori.jpeg',
   'marco-antonio-quelca': 'marco-quelca.png',
   'gabriel-galindo': 'gabriel-galindo.jpeg',
-  'willy-benjamin-suarez': 'willy-suarez.png',
+  'willy-benjamin-suarez': 'willy-suarez.jpg',
   'jocelyn-chavez-farro': 'jocelyn-chavez.jpeg',
   'victor-hugo-cortes-cortes': 'victor-cortes.png',
   'yerko-paz-huet': 'yerko-paz.jpeg',
@@ -29,7 +29,7 @@ export const SPEAKER_PHOTO_MAP = {
   'edmundo-enrique-vilches-luzio': 'edmundo-vilches.jpeg',
   'hans-v-kukok-montoya': 'hans-kukoc.jpeg',
   // Fotos actualizadas
-  'alejandra-noldine': 'alejandra-noldin.jpeg',
+  'alejandra-gabriela-noldin-paredes': 'alejandra-noldin.jpeg',
   'camilo-vasquez-ledezma': 'camilo-vasquez.jpeg',
   'ibar-mario-vasquez-ramos': 'ibar-vasquez.png',
   'jorge-eduardo-espinoza-arzabe': 'jorge-espinoza.png',
@@ -38,7 +38,10 @@ export const SPEAKER_PHOTO_MAP = {
   'sonia-flores-mamani': 'sonia-flores.jpeg',
   'abrahan-salas': 'abrahan-salas.png',
   'andres-tapia': 'andres-tapia.png',
-  'maurice-cazorla-murillo': 'maurice-cazorla.jpg'
+  'maurice-cazorla-murillo': 'maurice-cazorla.jpg',
+  'katiuska-aranibar-gonzales': 'katihuska-aranibar.jpeg',
+  'crhystian-patrick-maranon-mendieta': 'crhystian-maranon.jpg',
+  'jorge-nakamura-kina': 'jorge-nakamura.jpeg',
 };
 
 // Direct mapping to the user's PNG flag files in /assets/flags/

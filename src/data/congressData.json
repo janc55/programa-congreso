@@ -196,9 +196,9 @@
       ],
       "speakers": [
         {
-          "n": "Dr. Jorge Nakamura",
-          "d": "Jorge Nakamura",
-          "s": "jorge-nakamura"
+          "n": "Dr. Jorge Nakamura Kina",
+          "d": "Jorge Nakamura Kina",
+          "s": "jorge-nakamura-kina"
         }
       ],
       "title": null,
@@ -216,7 +216,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dr. Robert Miranda Rafael",
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 4
@@ -403,7 +403,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dr. Robert Miranda Rafael",
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 10
@@ -583,7 +583,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dr. Robert Miranda Rafael",
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 16
@@ -608,7 +608,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dr. Robert Miranda Rafael",
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 17
@@ -869,7 +869,7 @@
     {
       "day": "2026-11-12",
       "start": "14:30",
-      "end": "16:00",
+      "end": "16:30",
       "sala": null,
       "room": "Sala de Simulación 1",
       "careers": [
@@ -877,9 +877,9 @@
       ],
       "speakers": [
         {
-          "n": "Dr. Jorge Nakamura",
-          "d": "Jorge Nakamura",
-          "s": "jorge-nakamura"
+          "n": "Dr. Jorge Nakamura Kina",
+          "d": "Jorge Nakamura Kina",
+          "s": "jorge-nakamura-kina"
         }
       ],
       "title": null,
@@ -891,13 +891,15 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
-      "mesa": null,
+      "mesa": {
+        "apoyo": "Dra. Zulema Dominguez"
+      },
       "id": 27
     },
     {
       "day": "2026-11-12",
       "start": "14:30",
-      "end": "16:00",
+      "end": "16:30",
       "sala": null,
       "room": "Sala de Simulación 2",
       "careers": [
@@ -1171,7 +1173,7 @@
           "s": "adrian-aramayo-ponce"
         }
       ],
-      "title": "PONENCIA MAGISTRAL INTEGRAL ATODAS LAS CARRERAS",
+      "title": "CONFERENCIA MAGISTRAL (Todos los Congresistas)",
       "topic": "Innovación digital",
       "who": null,
       "virtual": false,
@@ -1324,7 +1326,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [],
+      "notes": [
+        "Hora inferida: la celda del Excel dice \"2\""
+      ],
       "pending": false,
       "kind": "charla",
       "day": "2026-11-13",
@@ -1605,9 +1609,9 @@
       ],
       "speakers": [
         {
-          "n": "Dr. Jorge Nakamura",
-          "d": "Jorge Nakamura",
-          "s": "jorge-nakamura"
+          "n": "Dr. Jorge Nakamura Kina",
+          "d": "Jorge Nakamura Kina",
+          "s": "jorge-nakamura-kina"
         }
       ],
       "title": null,
@@ -1625,8 +1629,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez",
-        "sec": "Dra Fátima Bracamonte"
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
+        "sec": "Dr. Alejandro Melendrez Marañón"
       },
       "id": 52
     },
@@ -1698,15 +1702,15 @@
       ],
       "speakers": [
         {
-          "n": "Dr. Camilo Vásquez Ledezma",
-          "d": "Camilo Vásquez Ledezma",
-          "s": "camilo-vasquez-ledezma"
+          "n": "Dra. Lidia Mamani Atahuichi",
+          "d": "Lidia Mamani Atahuichi",
+          "s": "lidia-mamani-atahuichi"
         }
       ],
       "title": null,
-      "topic": "IA en triage y servicios de emergencia y apoyo diagnóstico",
+      "topic": "Agonistas GLP-1",
       "who": null,
-      "virtual": true,
+      "virtual": false,
       "country": null,
       "mod": null,
       "notes": [],
@@ -1718,8 +1722,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez",
-        "sec": "Dra Fátima Bracamonte"
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
+        "sec": "Dr. Alejandro Melendrez Marañón"
       },
       "id": 55
     },
@@ -1853,7 +1857,7 @@
         }
       ],
       "title": null,
-      "topic": "Intubación pediátrica-Desafios",
+      "topic": "Intubación orotraqueal-Desafios IOT Infantil dificil.",
       "who": null,
       "virtual": true,
       "country": "Brasil",
@@ -1867,8 +1871,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Celyd del Carmen Gomez",
-        "sec": "Dra Fátima Bracamonte"
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
+        "sec": "Dr. Alejandro Melendrez Marañón"
       },
       "id": 60
     },
@@ -1917,8 +1921,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Celyd del Carmen Gomez",
-        "sec": "Dra Fátima Bracamonte"
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
+        "sec": "Dr. Alejandro Melendrez Marañón"
       },
       "id": 62
     },
@@ -2090,19 +2094,19 @@
       ],
       "speakers": [
         {
-          "n": "Dr. ACEFALIA (PENDIENTE nombre)",
-          "d": "ACEFALIA",
-          "s": "acefalia"
+          "n": "Dr. Camilo Vásquez Ledezma",
+          "d": "Camilo Vásquez Ledezma",
+          "s": "camilo-vasquez-ledezma"
         }
       ],
       "title": null,
-      "topic": "Acefalia",
+      "topic": "IA en triage y servicios de emergencia y apoyo diagnóstico",
       "who": null,
       "virtual": false,
       "country": null,
       "mod": null,
       "notes": [],
-      "pending": true,
+      "pending": false,
       "kind": "charla",
       "day": "2026-11-13",
       "start": "15:00",
@@ -2110,8 +2114,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Ibeth Miranda",
-        "sec": "Dra Alejandro Melendrez"
+        "pres": "Dra. Ibeth Miranda Flores",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 69
     },
@@ -2183,18 +2187,13 @@
       ],
       "speakers": [
         {
-          "n": "Dra. Carmen Durán",
-          "d": "Carmen Durán",
-          "s": "carmen-duran"
-        },
-        {
-          "n": "Dra. Lidia Mamani",
-          "d": "Lidia Mamani",
-          "s": "lidia-mamani"
+          "n": "Dr. Crhystian Patrick Marañón Mendieta",
+          "d": "Crhystian Patrick Marañón Mendieta",
+          "s": "crhystian-patrick-maranon-mendieta"
         }
       ],
       "title": null,
-      "topic": "Agonistas GLP-1",
+      "topic": "Manejo Quirurgico de la Hemorragia intraparto",
       "who": null,
       "virtual": false,
       "country": null,
@@ -2208,8 +2207,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Ibeth Miranda",
-        "sec": "Dra Alejandro Melendrez"
+        "pres": "Dra. Ibeth Miranda Flores",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 72
     },
@@ -2281,13 +2280,13 @@
       ],
       "speakers": [
         {
-          "n": "Dra. Alejandra Noldine",
-          "d": "Alejandra Noldine",
-          "s": "alejandra-noldine"
+          "n": "Dra. Alejandra Gabriela Noldin Paredes",
+          "d": "Alejandra Gabriela Noldin Paredes",
+          "s": "alejandra-gabriela-noldin-paredes"
         }
       ],
       "title": null,
-      "topic": "Medicina Tradicional en Medicina Familiar",
+      "topic": "Integracion de la Medicina Tradicional en la practica de la Medicina Familiar en Paraguay",
       "who": null,
       "virtual": true,
       "country": "Paraguay",
@@ -2301,8 +2300,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Ibeth Miranda",
-        "sec": "Dra Alejandro Melendrez"
+        "pres": "Dra. Ibeth Miranda Flores",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 75
     },
@@ -2371,7 +2370,7 @@
       "speakers": [],
       "title": "Preguntas y respuestas",
       "topic": null,
-      "who": "Durán, Mamani, Noldine",
+      "who": "Vasquez, Marañón, Noldine",
       "virtual": false,
       "country": null,
       "mod": null,
@@ -2384,8 +2383,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dra. Ibeth Miranda",
-        "sec": "Dra Alejandro Melendrez"
+        "pres": "Dra. Ibeth Miranda Flores",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 78
     },
@@ -2450,12 +2449,12 @@
       "careers": [],
       "speakers": [
         {
-          "n": "Lic Hans V. Kukok Montoya",
+          "n": "Lic. Hans V. Kukok Montoya",
           "d": "Hans V. Kukok Montoya",
           "s": "hans-v-kukok-montoya"
         }
       ],
-      "title": "PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS",
+      "title": "CONFERENCIA MAGISTRAL (Todos los Congresistas)",
       "topic": "El poder de la ACTITUD POSITIVA",
       "who": null,
       "virtual": false,
@@ -2542,11 +2541,6 @@
     {
       "level": "pendiente",
       "day": "2026-11-12",
-      "text": "Sin presidente/secretario de mesa: 14:30–16:00 Sala de Simulación 1: Jorge Nakamura"
-    },
-    {
-      "level": "pendiente",
-      "day": "2026-11-12",
       "text": "Sin presidente/secretario de mesa: 14:30–16:30 SALA 3 (Piso 6): Katiuska Aranibar Gonzales"
     },
     {
@@ -2557,17 +2551,17 @@
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "16:40–17:40 Sala 2: Edmundo Enrique Vilches Luzio coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
+      "text": "16:40–17:40 Sala 2: Edmundo Enrique Vilches Luzio coincide con CONFERENCIA MAGISTRAL (Todos los Congresistas) (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "17:30–18:00 Sala 4: Preguntas y respuestas coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
+      "text": "17:30–18:00 Sala 4: Preguntas y respuestas coincide con CONFERENCIA MAGISTRAL (Todos los Congresistas) (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
+      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con CONFERENCIA MAGISTRAL (Todos los Congresistas) (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
@@ -2592,17 +2586,27 @@
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dato pendiente en el Excel: 15:00–15:40 Sala 3: ACEFALIA"
-    },
-    {
-      "level": "pendiente",
-      "day": "2026-11-13",
       "text": "Sin presidente/secretario de mesa: 10:00–12:00 Sala de Simulación 1: sin expositor"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
       "text": "Sin presidente/secretario de mesa: 14:30–16:00 Sala de Debates de Derecho: Pamela Arias"
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Dr. Carlos Ariel Trigo Vargas (Sala 3, Sistemas): la celda de hora del Excel dice \"2\". Se puso 08:40–09:20 por la secuencia; confirmar."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Sala 3, preguntas de las 12:30: dicen \"Nakamura / Vásquez / Flores\", pero Vásquez ya no está en la mañana (ahora dicta Lidia Mamani)."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Dr. Camilo Vásquez Ledezma (15:00): antes decía VIRTUAL y ahora no. Confirmar la modalidad."
     },
     {
       "level": "revisar",
@@ -2627,7 +2631,7 @@
     {
       "level": "revisar",
       "day": "general",
-      "text": "Nombres de mesa escritos distinto: Jonatan/Jonahan Alarcon, Sanchez/Sänchez, Dra/Dr. Alejandro Melendrez, Est./Lic. Liliana Pizarro Chiara, Celyd del Carmen Gomez con y sin título; hay minúsculas (Raul laime, Ronald tamayo)."
+      "text": "Nombres escritos distinto: Noldin/Noldine, Melendrez con y sin Marañón, \"Dra Fátima\" sin punto, Est./Lic. Liliana Pizarro Chiara, Sanchez/Sänchez; hay minúsculas (Raul laime, Ronald tamayo)."
     },
     {
       "level": "revisar",
