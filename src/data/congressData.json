@@ -117,7 +117,8 @@
       ],
       "pending": false,
       "kind": "workshop",
-      "id": 0
+      "id": 0,
+      "mesa": null
     },
     {
       "day": "2026-11-11",
@@ -146,7 +147,8 @@
       ],
       "pending": false,
       "kind": "workshop",
-      "id": 1
+      "id": 1,
+      "mesa": null
     },
     {
       "day": "2026-11-12",
@@ -162,10 +164,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [
-        "SALA 1 y 2"
-      ],
+      "notes": [],
       "pending": false,
+      "mesa": null,
       "kind": "registro",
       "id": 2
     },
@@ -183,11 +184,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [
-        "Plenaria conjunta para las 600 personas",
-        "SALA 1 (Subterraneo  Hotel Eden)"
-      ],
+      "notes": [],
       "pending": false,
+      "mesa": null,
       "kind": "acto",
       "id": 3
     },
@@ -216,6 +215,10 @@
       "end": "10:40",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Robert Miranda Rafael",
+        "sec": "Dra. Zulema Domínguez Durán"
+      },
       "id": 4
     },
     {
@@ -243,6 +246,10 @@
       "end": "11:00",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Maria del Mar Hinojosa",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 5
     },
     {
@@ -270,6 +277,10 @@
       "end": "11:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Raul laime",
+        "sec": "Dr. Jonatan Alarcon"
+      },
       "id": 6
     },
     {
@@ -297,6 +308,10 @@
       "end": "11:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Alvaro Altamirano",
+        "sec": "Dr. Juan Torrico"
+      },
       "id": 7
     },
     {
@@ -325,6 +340,10 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": {
+        "pres": "Ing. Rocio Carrasco",
+        "sec": "Lic. America Ayllón"
+      },
       "id": 8
     },
     {
@@ -352,6 +371,10 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": {
+        "pres": "Lic. Patricia Candelaria Mena Cortes",
+        "sec": "Dra. Nataly Colque Choque"
+      },
       "id": 9
     },
     {
@@ -379,6 +402,10 @@
       "end": "11:20",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Robert Miranda Rafael",
+        "sec": "Dra. Zulema Domínguez Durán"
+      },
       "id": 10
     },
     {
@@ -406,6 +433,10 @@
       "end": "12:00",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 11
     },
     {
@@ -433,6 +464,10 @@
       "end": "12:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Raul laime",
+        "sec": "Dr. Jonatan Alarcon"
+      },
       "id": 12
     },
     {
@@ -454,6 +489,10 @@
       "end": "11:15",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Alvaro Altamirano",
+        "sec": "Dr. Juan Torrico"
+      },
       "id": 13
     },
     {
@@ -461,7 +500,7 @@
       "start": "11:00",
       "end": "12:00",
       "sala": null,
-      "room": "sala de simulación 2",
+      "room": "Sala de simulación 2",
       "careers": [
         "enf"
       ],
@@ -481,6 +520,10 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": {
+        "pres": "Lic. Patricia Candelaria Mena Cortes",
+        "sec": "Dra. Nataly Colque Choque"
+      },
       "id": 14
     },
     {
@@ -508,6 +551,10 @@
       "end": "12:15",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Alvaro Altamirano",
+        "sec": "Dr. Juan Torrico"
+      },
       "id": 15
     },
     {
@@ -535,6 +582,10 @@
       "end": "12:00",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Robert Miranda Rafael",
+        "sec": "Dra. Zulema Domínguez Durán"
+      },
       "id": 16
     },
     {
@@ -556,6 +607,10 @@
       "end": "12:30",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Robert Miranda Rafael",
+        "sec": "Dra. Zulema Domínguez Durán"
+      },
       "id": 17
     },
     {
@@ -577,6 +632,10 @@
       "end": "12:30",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 18
     },
     {
@@ -598,6 +657,10 @@
       "end": "12:30",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Raul laime",
+        "sec": "Dr. Jonatan Alarcon"
+      },
       "id": 19
     },
     {
@@ -619,6 +682,10 @@
       "end": "12:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Alvaro Altamirano",
+        "sec": "Dr. Juan Torrico"
+      },
       "id": 20
     },
     {
@@ -639,6 +706,7 @@
         "EDIFICIO CENTRAL UNIOR"
       ],
       "pending": false,
+      "mesa": null,
       "kind": "almuerzo",
       "id": 21
     },
@@ -667,6 +735,10 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": {
+        "pres": "Maria del Mar Hinojosa",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 22
     },
     {
@@ -694,6 +766,10 @@
       "end": "15:30",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Lic.Mabel Andrea Huanaco",
+        "sec": "Est. Liliana Pizarro Chiara"
+      },
       "id": 23
     },
     {
@@ -722,6 +798,10 @@
       "end": "15:30",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "s:Lic. America Ayllón - Ing. Rocio Carrasco"
+      },
       "id": 24
     },
     {
@@ -749,6 +829,10 @@
       "end": "16:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Jonahan Alarcon",
+        "sec": "Dra. Norma Campero"
+      },
       "id": 25
     },
     {
@@ -776,6 +860,10 @@
       "end": "15:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "TDP.Dennis Bustos",
+        "sec": "TDP. Ronald tamayo Quispe"
+      },
       "id": 26
     },
     {
@@ -803,6 +891,7 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": null,
       "id": 27
     },
     {
@@ -835,6 +924,9 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": {
+        "apoyo": "Dr. Alejandro Melendrez"
+      },
       "id": 28
     },
     {
@@ -862,6 +954,7 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": null,
       "id": 29
     },
     {
@@ -889,6 +982,10 @@
       "end": "16:30",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Patricia Candelaria Mena Cortes",
+        "sec": "Lic. Liliana Pizarro Chiara"
+      },
       "id": 30
     },
     {
@@ -917,6 +1014,10 @@
       "end": "16:30",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "s: Lic. America Ayllón - Ing. Rocio Carrasco"
+      },
       "id": 31
     },
     {
@@ -944,6 +1045,10 @@
       "end": "16:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "TDP.Dennis Bustos",
+        "sec": "TDP. Ronald tamayo Quispe"
+      },
       "id": 32
     },
     {
@@ -971,6 +1076,10 @@
       "end": "17:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Jonatan Alarcon",
+        "sec": "Dra. Norma Campero"
+      },
       "id": 33
     },
     {
@@ -992,6 +1101,10 @@
       "end": "17:00",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Patricia Candelaria Mena Cortes",
+        "sec": "Lic. Liliana Pizarro Chiara"
+      },
       "id": 34
     },
     {
@@ -1013,6 +1126,10 @@
       "end": "17:00",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "s: Lic. America Ayllón - Ing. Rocio Carrasco"
+      },
       "id": 35
     },
     {
@@ -1034,6 +1151,10 @@
       "end": "17:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "TDP.Dennis Bustos",
+        "sec": "TDP. Ronald tamayo Quispe"
+      },
       "id": 36
     },
     {
@@ -1050,7 +1171,7 @@
           "s": "adrian-aramayo-ponce"
         }
       ],
-      "title": "Plenaria",
+      "title": "PONENCIA MAGISTRAL INTEGRAL ATODAS LAS CARRERAS",
       "topic": "Innovación digital",
       "who": null,
       "virtual": false,
@@ -1058,6 +1179,7 @@
       "mod": null,
       "notes": [],
       "pending": false,
+      "mesa": null,
       "kind": "plenaria",
       "id": 37
     },
@@ -1086,6 +1208,10 @@
       "end": "09:00",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Oscar Arraya Mier",
+        "sec": "Dr. Carlos German Torrez Soria"
+      },
       "id": 38
     },
     {
@@ -1113,6 +1239,10 @@
       "end": "08:40",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Ing. Yubitza Quintanilla",
+        "sec": "Ing. Rocio Carrasco"
+      },
       "id": 39
     },
     {
@@ -1140,6 +1270,10 @@
       "end": "09:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "Lic. América Ayllón"
+      },
       "id": 40
     },
     {
@@ -1167,6 +1301,10 @@
       "end": "09:20",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Dra.Carolina Calderón",
+        "sec": "Dra. Gaby castelo"
+      },
       "id": 41
     },
     {
@@ -1194,6 +1332,10 @@
       "end": "09:20",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Ing. Yubitza Quintanilla",
+        "sec": "Ing. Rocio Carrasco"
+      },
       "id": 42
     },
     {
@@ -1221,6 +1363,10 @@
       "end": "10:30",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr. Oscar Arraya Mier",
+        "sec": "Dr. Carlos German Torrez Soria"
+      },
       "id": 43
     },
     {
@@ -1248,6 +1394,10 @@
       "end": "10:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "Lic. América Ayllón"
+      },
       "id": 44
     },
     {
@@ -1275,6 +1425,10 @@
       "end": "10:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Ing. Yubitza Quintanilla",
+        "sec": "Ing. Rocio Carrasco"
+      },
       "id": 45
     },
     {
@@ -1302,6 +1456,10 @@
       "end": "10:20",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "TDP. Ronald Tamayo Quispe",
+        "sec": "TDP.Dennis Bustos"
+      },
       "id": 46
     },
     {
@@ -1323,6 +1481,10 @@
       "end": "10:30",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Ing. Yubitza Quintanilla",
+        "sec": "Ing. Rocio Carrasco"
+      },
       "id": 47
     },
     {
@@ -1346,6 +1508,10 @@
       "end": "10:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Gladiz Roman",
+        "sec": "Lic. América Ayllón"
+      },
       "id": 48
     },
     {
@@ -1368,6 +1534,7 @@
       "notes": [],
       "pending": true,
       "kind": "workshop",
+      "mesa": null,
       "id": 49
     },
     {
@@ -1395,6 +1562,10 @@
       "end": "11:30",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr Alvaro Altamirano",
+        "sec": "Dr. Rolando Choque"
+      },
       "id": 50
     },
     {
@@ -1419,9 +1590,13 @@
       "kind": "charla",
       "day": "2026-11-13",
       "start": "10:30",
-      "end": "11:00",
+      "end": "11:10",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 51
     },
     {
@@ -1449,6 +1624,10 @@
       "end": "11:10",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Celyd del Carmen Gomez",
+        "sec": "Dra Fátima Bracamonte"
+      },
       "id": 52
     },
     {
@@ -1476,6 +1655,10 @@
       "end": "11:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Lourdes calani Cuiza",
+        "sec": "Lic María Luisa belzu Llave"
+      },
       "id": 53
     },
     {
@@ -1499,10 +1682,14 @@
       "pending": false,
       "kind": "charla",
       "day": "2026-11-13",
-      "start": "11:00",
-      "end": "12:00",
+      "start": "11:10",
+      "end": "11:50",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Maria del Mar Hinojosa",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 54
     },
     {
@@ -1530,6 +1717,10 @@
       "end": "11:50",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Celyd del Carmen Gomez",
+        "sec": "Dra Fátima Bracamonte"
+      },
       "id": 55
     },
     {
@@ -1551,6 +1742,10 @@
       "end": "11:45",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr Alvaro Altamirano",
+        "sec": "Dr. Rolando Choque"
+      },
       "id": 56
     },
     {
@@ -1578,6 +1773,10 @@
       "end": "12:30",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic.Shirley Jael valencuela Guzman",
+        "sec": "Dra. Jaquelin Burgos Zegarra"
+      },
       "id": 57
     },
     {
@@ -1605,7 +1804,42 @@
       "end": "12:45",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr Alvaro Altamirano",
+        "sec": "Dr. Rolando Choque"
+      },
       "id": 58
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Lic. Maurice Cazorla Murillo",
+          "d": "Maurice Cazorla Murillo",
+          "s": "maurice-cazorla-murillo"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "11:50",
+      "end": "12:30",
+      "sala": 2,
+      "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
+      "id": 59
     },
     {
       "careers": [
@@ -1632,33 +1866,10 @@
       "end": "12:30",
       "sala": 3,
       "room": null,
-      "id": 59
-    },
-    {
-      "careers": [
-        "gas"
-      ],
-      "speakers": [
-        {
-          "n": "Lic. Maurice Cazorla Murillo",
-          "d": "Maurice Cazorla Murillo",
-          "s": "maurice-cazorla-murillo"
-        }
-      ],
-      "title": null,
-      "topic": null,
-      "who": null,
-      "virtual": false,
-      "country": null,
-      "mod": null,
-      "notes": [],
-      "pending": false,
-      "kind": "charla",
-      "day": "2026-11-13",
-      "start": "12:00",
-      "end": "12:30",
-      "sala": 2,
-      "room": null,
+      "mesa": {
+        "pres": "Celyd del Carmen Gomez",
+        "sec": "Dra Fátima Bracamonte"
+      },
       "id": 60
     },
     {
@@ -1680,6 +1891,10 @@
       "end": "13:00",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 61
     },
     {
@@ -1701,6 +1916,10 @@
       "end": "13:00",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Celyd del Carmen Gomez",
+        "sec": "Dra Fátima Bracamonte"
+      },
       "id": 62
     },
     {
@@ -1722,6 +1941,10 @@
       "end": "13:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic. Lourdes calani Cuiza",
+        "sec": "Lic María Luisa belzu Llave"
+      },
       "id": 63
     },
     {
@@ -1743,6 +1966,10 @@
       "end": "13:00",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Dr Alvaro Altamirano",
+        "sec": "Dr. Rolando Choque"
+      },
       "id": 64
     },
     {
@@ -1763,6 +1990,7 @@
         "EDIFICIO CENTRAL UNIOR"
       ],
       "pending": false,
+      "mesa": null,
       "kind": "almuerzo",
       "id": 65
     },
@@ -1791,6 +2019,7 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
+      "mesa": null,
       "id": 66
     },
     {
@@ -1815,9 +2044,13 @@
       "kind": "charla",
       "day": "2026-11-13",
       "start": "15:00",
-      "end": "16:30",
+      "end": "16:00",
       "sala": 1,
       "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
       "id": 67
     },
     {
@@ -1834,9 +2067,9 @@
       "title": null,
       "topic": "Confección de aparatos ortopédicos pre-quirúrgicos para bebés con FLAP",
       "who": null,
-      "virtual": true,
+      "virtual": false,
       "country": null,
-      "mod": null,
+      "mod": "UCEBOL PRESENCIAL",
       "notes": [],
       "pending": false,
       "kind": "charla",
@@ -1845,6 +2078,10 @@
       "end": "15:40",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "TDP. Ronald Tamayo Quispe",
+        "sec": "TDP.Dennis Bustos"
+      },
       "id": 68
     },
     {
@@ -1872,6 +2109,10 @@
       "end": "15:40",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Ibeth Miranda",
+        "sec": "Dra Alejandro Melendrez"
+      },
       "id": 69
     },
     {
@@ -1899,6 +2140,10 @@
       "end": "16:00",
       "sala": 4,
       "room": null,
+      "mesa": {
+        "pres": "Lic.Lizeth Arroyo Rodriguez",
+        "sec": "Lic. Lizeth Arroyo Rodriguez"
+      },
       "id": 70
     },
     {
@@ -1926,6 +2171,10 @@
       "end": "16:40",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Norma Campero",
+        "sec": "Dra. Pamela Sanchez"
+      },
       "id": 71
     },
     {
@@ -1958,7 +2207,42 @@
       "end": "16:20",
       "sala": 3,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Ibeth Miranda",
+        "sec": "Dra Alejandro Melendrez"
+      },
       "id": 72
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Andres Tapia",
+          "d": "Andres Tapia",
+          "s": "andres-tapia"
+        }
+      ],
+      "title": null,
+      "topic": null,
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:00",
+      "end": "17:00",
+      "sala": 1,
+      "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
+      "id": 73
     },
     {
       "careers": [
@@ -1985,7 +2269,11 @@
       "end": "17:00",
       "sala": 4,
       "room": null,
-      "id": 73
+      "mesa": {
+        "pres": "Lic. Lourdes calani Cuiza",
+        "sec": "Lic María Luisa belzu Llave"
+      },
+      "id": 74
     },
     {
       "careers": [
@@ -2012,33 +2300,10 @@
       "end": "17:00",
       "sala": 3,
       "room": null,
-      "id": 74
-    },
-    {
-      "careers": [
-        "gas"
-      ],
-      "speakers": [
-        {
-          "n": "Andres Tapia",
-          "d": "Andres Tapia",
-          "s": "andres-tapia"
-        }
-      ],
-      "title": null,
-      "topic": null,
-      "who": null,
-      "virtual": false,
-      "country": null,
-      "mod": null,
-      "notes": [],
-      "pending": false,
-      "kind": "charla",
-      "day": "2026-11-13",
-      "start": "16:30",
-      "end": "18:00",
-      "sala": 1,
-      "room": null,
+      "mesa": {
+        "pres": "Dra. Ibeth Miranda",
+        "sec": "Dra Alejandro Melendrez"
+      },
       "id": 75
     },
     {
@@ -2066,7 +2331,38 @@
       "end": "17:40",
       "sala": 2,
       "room": null,
+      "mesa": {
+        "pres": "Dra. Norma Campero",
+        "sec": "Dra. Pamela Sanchez"
+      },
       "id": 76
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [],
+      "title": "Preguntas y respuestas",
+      "topic": null,
+      "who": "Guerrero / Tapia",
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [
+        "Nota GTH: SALA 4 17:00-17:30"
+      ],
+      "pending": false,
+      "kind": "qa",
+      "day": "2026-11-13",
+      "start": "17:00",
+      "end": "17:30",
+      "sala": 1,
+      "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
+      "id": 77
     },
     {
       "careers": [
@@ -2087,7 +2383,11 @@
       "end": "17:30",
       "sala": 3,
       "room": null,
-      "id": 77
+      "mesa": {
+        "pres": "Dra. Ibeth Miranda",
+        "sec": "Dra Alejandro Melendrez"
+      },
+      "id": 78
     },
     {
       "careers": [
@@ -2108,7 +2408,11 @@
       "end": "17:30",
       "sala": 4,
       "room": null,
-      "id": 78
+      "mesa": {
+        "pres": "Lic Patricia Candelaria Mena Cortes",
+        "sec": "Lic Adriana Angela Saravia Escobar"
+      },
+      "id": 79
     },
     {
       "careers": [
@@ -2131,7 +2435,11 @@
       "end": "18:00",
       "sala": 4,
       "room": null,
-      "id": 79
+      "mesa": {
+        "pres": "TDP. Ronald Tamayo Quispe",
+        "sec": "TDP.Dennis Bustos"
+      },
+      "id": 80
     },
     {
       "day": "2026-11-13",
@@ -2147,7 +2455,7 @@
           "s": "hans-v-kukok-montoya"
         }
       ],
-      "title": "Plenaria",
+      "title": "PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS",
       "topic": "El poder de la ACTITUD POSITIVA",
       "who": null,
       "virtual": false,
@@ -2155,8 +2463,9 @@
       "mod": null,
       "notes": [],
       "pending": false,
+      "mesa": null,
       "kind": "plenaria",
-      "id": 80
+      "id": 81
     },
     {
       "careers": [
@@ -2177,29 +2486,10 @@
       "end": "18:15",
       "sala": 2,
       "room": null,
-      "id": 81
-    },
-    {
-      "careers": [
-        "gas"
-      ],
-      "speakers": [],
-      "title": "Preguntas y respuestas",
-      "topic": null,
-      "who": "Guerrero / Tapia",
-      "virtual": false,
-      "country": null,
-      "mod": null,
-      "notes": [
-        "Nota GTH: SALA 4 17:00-17:30"
-      ],
-      "pending": false,
-      "kind": "qa",
-      "day": "2026-11-13",
-      "start": "18:00",
-      "end": "18:30",
-      "sala": 1,
-      "room": null,
+      "mesa": {
+        "pres": "Dra. Norma Campero",
+        "sec": "Dra. Pamela Sänchez"
+      },
       "id": 82
     },
     {
@@ -2216,10 +2506,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [
-        "Plenaria conjunta para las 600 personas"
-      ],
+      "notes": [],
       "pending": false,
+      "mesa": null,
       "kind": "acto",
       "id": 83
     }
@@ -2228,7 +2517,7 @@
     {
       "level": "conflicto",
       "day": "2026-11-12",
-      "text": "14:00–16:00 AUDITORIO: Armando Adrian Jimenez coincide con ALMUERZO 12:30–14:15, que es plenaria/general"
+      "text": "14:00–16:00 AUDITORIO: Armando Adrian Jimenez coincide con ALMUERZO 12:30–14:15"
     },
     {
       "level": "conflicto",
@@ -2251,49 +2540,49 @@
       "text": "Expositores sin tema en el Excel: Emilio Garnica Villagomez (10:00, Sala 2); Marco Antonio Quelca (11:00, Sala 2)"
     },
     {
-      "level": "conflicto",
-      "day": "2026-11-13",
-      "text": "14:30–16:00 Sala de Debates de Derecho: Pamela Arias coincide con ALMUERZO 13:00–14:45, que es plenaria/general"
+      "level": "pendiente",
+      "day": "2026-11-12",
+      "text": "Sin presidente/secretario de mesa: 14:30–16:00 Sala de Simulación 1: Jorge Nakamura"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-12",
+      "text": "Sin presidente/secretario de mesa: 14:30–16:30 SALA 3 (Piso 6): Katiuska Aranibar Gonzales"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "16:30–18:00 Sala 1: Andres Tapia coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+      "text": "14:30–16:00 Sala de Debates de Derecho: Pamela Arias coincide con ALMUERZO 13:00–14:45"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "16:40–17:40 Sala 2: Edmundo Enrique Vilches Luzio coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+      "text": "16:40–17:40 Sala 2: Edmundo Enrique Vilches Luzio coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "17:30–18:00 Sala 4: Preguntas y respuestas coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+      "text": "17:30–18:00 Sala 4: Preguntas y respuestas coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con Plenaria (Hans V. Kukok Montoya) 17:30–18:00, que es plenaria/general"
+      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con PONENCIA MAGISTRAL INTEGRAL A TODAS LAS CARRERAS (Hans V. Kukok Montoya) 17:30–18:00"
     },
     {
       "level": "conflicto",
       "day": "2026-11-13",
-      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con ACTO DE CLAUSURA DEL CONGRESO 18:00–19:00, que es plenaria/general"
-    },
-    {
-      "level": "conflicto",
-      "day": "2026-11-13",
-      "text": "18:00–18:30 Sala 1: Preguntas y respuestas coincide con ACTO DE CLAUSURA DEL CONGRESO 18:00–19:00, que es plenaria/general"
+      "text": "17:40–18:15 Sala 2: Preguntas y respuestas coincide con ACTO DE CLAUSURA DEL CONGRESO 18:00–19:00"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Expositores sin tema en el Excel: Rolando Manuel Barrientos Gomez (10:30, Sala 2); Abrahan Salas (11:00, Sala 2); Maurice Cazorla Murillo (12:00, Sala 2); Pablo Guerrero (15:00, Sala 1); Andres Tapia (16:30, Sala 1)"
+      "text": "Expositores sin tema en el Excel: Rolando Manuel Barrientos Gomez (10:30, Sala 2); Abrahan Salas (11:10, Sala 2); Maurice Cazorla Murillo (11:50, Sala 2); Pablo Guerrero (15:00, Sala 1); Andres Tapia (16:00, Sala 1)"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dato pendiente en el Excel: 10:00–10:30 Sala 4: Preguntas y respuestas PENDIENTE (Auditoría)"
+      "text": "Dato pendiente en el Excel: 10:00–10:30 Sala 4: Preguntas y respuestas"
     },
     {
       "level": "pendiente",
@@ -2303,37 +2592,57 @@
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dato pendiente en el Excel: 15:00–15:40 Sala 3: ACEFALIA – Acefalia"
+      "text": "Dato pendiente en el Excel: 15:00–15:40 Sala 3: ACEFALIA"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Sin presidente/secretario de mesa: 10:00–12:00 Sala de Simulación 1: sin expositor"
+    },
+    {
+      "level": "pendiente",
+      "day": "2026-11-13",
+      "text": "Sin presidente/secretario de mesa: 14:30–16:00 Sala de Debates de Derecho: Pamela Arias"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Los temas de Lic. Albina Maldonado y Lic. Ross Ibañez están cruzados entre la mañana (10:30 y 11:30) y la tarde (15:00 y 16:00): cada una aparece con el tema de la otra. Confirmar cuál es el correcto."
+      "text": "Los temas de Lic. Albina Maldonado y Lic. Ross Ibañez están cruzados entre la mañana (10:30 y 11:30) y la tarde (15:00 y 16:00). Confirmar cuál es el correcto."
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Columna I sin título: hay 4 horarios (15:00–15:40, 15:40–16:20, 16:20–17:00, 17:00–17:30) pintados de amarillo (Ing. Sistemas) sin ningún expositor. Podrían faltar charlas de Sistemas en la tarde."
+      "text": "Dr. Franz Callizaya: ya no dice VIRTUAL y se agregó \"UCEBOL PRESENCIAL\" al final del tema. Se movió a mod; confirmar que viene en persona."
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Nota \"GTH\" en el Excel: las preguntas de Guerrero/Tapia dicen \"SALA 4 17:00-17:30\", pero en la grilla están en Sala 1 a las 18:00–18:30 y en Sala 4 17:00–17:30 ya hay preguntas de Maldonado/Ibañez."
+      "text": "La nota \"Nota GTH: SALA 4 17:00-17:30\" quedó obsoleta: las preguntas de Guerrero/Tapia ya están en Sala 1 a las 17:00, y Sala 4 tiene otras preguntas a esa hora."
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Hay una fila de workshop \"10:00 - 12:00\" (fila 26) sin lugar, carrera ni expositor: parece un resto."
+      "text": "Sala 4, 15:00–16:00: Lic. Lizeth Arroyo Rodriguez figura como presidenta y como secretaria."
     },
     {
       "level": "revisar",
       "day": "general",
-      "text": "Auditoría y Administración de Empresas comparten un solo color en el Excel; aquí van juntas como una carrera. Si necesitas programas separados, hay que decidir qué charlas van a cada una."
+      "text": "Nombres de mesa escritos distinto: Jonatan/Jonahan Alarcon, Sanchez/Sänchez, Dra/Dr. Alejandro Melendrez, Est./Lic. Liliana Pizarro Chiara, Celyd del Carmen Gomez con y sin título; hay minúsculas (Raul laime, Ronald tamayo)."
+    },
+    {
+      "level": "revisar",
+      "day": "general",
+      "text": "Auditoría y Adm. Empresas comparten un solo color en el Excel y van como una carrera."
     },
     {
       "level": "revisar",
       "day": "2026-11-12",
-      "text": "Dr. Yerko Paz Huet dicta \"Derecho Notarial\" el jueves 14:30 y de nuevo el viernes 08:00. Confirmar que es una repetición intencional."
+      "text": "Dr. Yerko Paz Huet dicta \"Derecho Notarial\" el jueves 14:30 y de nuevo el viernes 08:00. Confirmar que es repetición intencional."
+    },
+    {
+      "level": "revisar",
+      "day": "2026-11-13",
+      "text": "Los 4 horarios amarillos sueltos de Sistemas (tarde) ya no aparecen en el Excel; confirmar que no faltan charlas."
     }
   ]
 }
