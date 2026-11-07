@@ -27,7 +27,15 @@ export const SPEAKER_PHOTO_MAP = {
   'franz-rodrigo-callizaya-vergara': 'franz-callisaya.png',
   'maria-luiza-sotomayor-duarte': 'maria-sotomayor.jpeg',
   'edmundo-enrique-vilches-luzio': 'edmundo-vilches.jpeg',
-  'hans-v-kukok-montoya': 'hans-kukoc.jpeg'
+  'hans-v-kukok-montoya': 'hans-kukoc.jpeg',
+  // Fotos actualizadas
+  'alejandra-noldine': 'alejandra-noldin.jpeg',
+  'camilo-vasquez-ledezma': 'camilo-vasquez.jpeg',
+  'ibar-mario-vasquez-ramos': 'ibar-vasquez.png',
+  'jorge-eduardo-espinoza-arzabe': 'jorge-espinoza.png',
+  'marco-antonio-laura-avendano': 'marco-laura.jpg',
+  'rolando-manuel-barrientos-gomez': 'rolando-barrientos.jpeg',
+  'sonia-flores-mamani': 'sonia-flores.jpeg'
 };
 
 // Direct mapping to the user's PNG flag files in /assets/flags/
