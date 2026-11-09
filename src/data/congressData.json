@@ -155,7 +155,7 @@
       "start": "08:00",
       "end": "09:30",
       "sala": null,
-      "room": null,
+      "room": "Sala 1 (Subterráneo) y Sala 2 (Piso 2) - Hotel Edén",
       "careers": [],
       "speakers": [],
       "title": "Inscripciones y registro",
@@ -164,7 +164,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [],
+      "notes": [
+        "Sala 1 y Sala 2"
+      ],
       "pending": false,
       "mesa": null,
       "kind": "registro",
@@ -174,7 +176,7 @@
       "day": "2026-11-12",
       "start": "09:30",
       "end": "10:00",
-      "sala": null,
+      "sala": 1,
       "room": null,
       "careers": [],
       "speakers": [],
@@ -184,7 +186,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [],
+      "notes": [
+        "Sala 1 (Subterráneo)"
+      ],
       "pending": false,
       "mesa": null,
       "kind": "acto",
@@ -2499,7 +2503,7 @@
       "day": "2026-11-13",
       "start": "18:00",
       "end": "19:00",
-      "sala": null,
+      "sala": 1,
       "room": null,
       "careers": [],
       "speakers": [],
@@ -2509,7 +2513,9 @@
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [],
+      "notes": [
+        "Sala 1 (Subterráneo)"
+      ],
       "pending": false,
       "mesa": null,
       "kind": "acto",

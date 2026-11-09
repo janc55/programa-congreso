@@ -42,6 +42,10 @@ export const SPEAKER_PHOTO_MAP = {
   'katiuska-aranibar-gonzales': 'katihuska-aranibar.jpeg',
   'crhystian-patrick-maranon-mendieta': 'crhystian-maranon.jpg',
   'jorge-nakamura-kina': 'jorge-nakamura.jpeg',
+  'lidia-mamani-atahuichi': 'lidia-mamani.jpeg',
+  'cesar-vincenty': 'cesar-vincenty.jpeg',
+  'luis-pacheco': 'luis-pacheco.jpeg'
+
 };
 
 // Direct mapping to the user's PNG flag files in /assets/flags/
