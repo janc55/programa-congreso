@@ -10,7 +10,7 @@ export default function BrochurePrintView({ congressData }) {
   const [includeGeneral, setIncludeGeneral] = useState(true);
   const [includeQA, setIncludeQA] = useState(true);
   const [isExporting, setIsExporting] = useState(false);
-  const [viewMode, setViewMode] = useState('carrera'); // 'carrera' | 'sala'
+  const [viewMode, setViewMode] = useState('carrera'); // 'carrera' | 'sala' | 'taller'
   const [selectedSala, setSelectedSala] = useState(1);
   const brochureRef = useRef(null);
 
@@ -18,15 +18,17 @@ export default function BrochurePrintView({ congressData }) {
 
   // Metadata de salones con nombres oficiales
   const SALA_META = {
-    1: { name: 'Paraíso',  floor: 'Subterráneo',  colorHex: '#F59E0B', btnActive: 'bg-amber-500 border-amber-500 text-white', btnIdle: 'bg-white border-amber-300 text-amber-800' },
-    2: { name: 'Ciénaga',  floor: 'Piso N° 2',    colorHex: '#9333EA', btnActive: 'bg-purple-600 border-purple-600 text-white', btnIdle: 'bg-white border-purple-300 text-purple-800' },
-    3: { name: 'Aurora',   floor: 'Piso N° 6',    colorHex: '#0284C7', btnActive: 'bg-sky-600 border-sky-600 text-white',    btnIdle: 'bg-white border-sky-300 text-sky-800' },
-    4: { name: 'Eclipse',  floor: 'Piso N° 7',    colorHex: '#2563EB', btnActive: 'bg-blue-600 border-blue-600 text-white',   btnIdle: 'bg-white border-blue-300 text-blue-800' },
+    1: { name: 'Paraíso', floor: 'Subterráneo', colorHex: '#F59E0B', btnActive: 'bg-amber-500 border-amber-500 text-white', btnIdle: 'bg-white border-amber-300 text-amber-800' },
+    2: { name: 'Ciénaga', floor: 'Piso N° 2', colorHex: '#9333EA', btnActive: 'bg-purple-600 border-purple-600 text-white', btnIdle: 'bg-white border-purple-300 text-purple-800' },
+    3: { name: 'Aurora', floor: 'Piso N° 6', colorHex: '#0284C7', btnActive: 'bg-sky-600 border-sky-600 text-white', btnIdle: 'bg-white border-sky-300 text-sky-800' },
+    4: { name: 'Eclipse', floor: 'Piso N° 7', colorHex: '#2563EB', btnActive: 'bg-blue-600 border-blue-600 text-white', btnIdle: 'bg-white border-blue-300 text-blue-800' },
   };
 
   const filterSessionsByDay = (dayId) => {
-    return sessions.filter((s) => {
+    const matches = sessions.filter((s) => {
       if (s.day !== dayId) return false;
+
+      if (viewMode === 'taller') return s.kind === 'workshop';
       if (!includeQA && s.kind === 'qa') return false;
 
       if (viewMode === 'sala') {
@@ -40,6 +42,11 @@ export default function BrochurePrintView({ congressData }) {
       const isGeneral = includeGeneral && GENERAL_KINDS.includes(s.kind);
       return matchesCareer || isGeneral;
     });
+
+    if (viewMode === 'taller') {
+      return [...matches].sort((a, b) => a.start.localeCompare(b.start));
+    }
+    return matches;
   };
 
   const thursdaySessions = filterSessionsByDay('2026-11-12');
@@ -50,12 +57,20 @@ export default function BrochurePrintView({ congressData }) {
   const careerTitle = selectedCareer === 'all' ? 'PROGRAMA GENERAL' : (careerInfo?.name?.toUpperCase() || 'PROGRAMA');
 
   const salaMeta = SALA_META[selectedSala];
-  const salaTitle    = `SALA ${selectedSala}`;
+  const salaTitle = `SALA ${selectedSala}`;
   const salaSubtitle = `${salaMeta?.name} · ${salaMeta?.floor} · Hotel Edén`;
 
-  const displayTitle    = viewMode === 'sala' ? salaTitle    : careerTitle;
-  const displaySubtitle = viewMode === 'sala' ? salaSubtitle : null;
-  const emptyLabel      = viewMode === 'sala' ? 'este salón' : 'esta carrera';
+  const workshopSessions = sessions.filter((s) => s.kind === 'workshop');
+  const workshopsByDay = (dayId) => workshopSessions.filter((s) => s.day === dayId).length;
+  const shortDayLabel = (dayId) => days.find((d) => d.id === dayId)?.short.replace(' · pre-congreso', '') || '';
+
+  const displayTitle = viewMode === 'sala' ? salaTitle : viewMode === 'taller' ? 'WORKSHOPS' : careerTitle;
+  const displaySubtitle = viewMode === 'sala' ? salaSubtitle : viewMode === 'taller' ? 'Talleres prácticos' : null;
+  const emptyLabel = viewMode === 'sala' ? 'este salón' : 'esta carrera';
+  const emptyMessage = (dayWord) =>
+    viewMode === 'taller'
+      ? `No hay workshops programados el día ${dayWord}.`
+      : `No hay actividades para ${emptyLabel} el día ${dayWord}.`;
 
   const handleExportPDF = async () => {
     if (!brochureRef.current || isExporting) return;
@@ -63,7 +78,9 @@ export default function BrochurePrintView({ congressData }) {
     try {
       const cleanName = viewMode === 'sala'
         ? `Sala_${selectedSala}`
-        : careerTitle.replace(/[^a-zA-Z0-9]/g, '_');
+        : viewMode === 'taller'
+          ? 'Workshops'
+          : careerTitle.replace(/[^a-zA-Z0-9]/g, '_');
       const filename = `Programa_${cleanName}_UNIOR_2026.png`;
       await exportElementToImage(brochureRef.current, filename);
     } catch (err) {
@@ -100,23 +117,30 @@ export default function BrochurePrintView({ congressData }) {
             <div className="flex gap-1.5 mb-3">
               <button
                 onClick={() => setViewMode('carrera')}
-                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
-                  viewMode === 'carrera'
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${viewMode === 'carrera'
                     ? 'bg-unior-wine border-unior-wine text-white shadow-xs'
                     : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 Por Carrera
               </button>
               <button
                 onClick={() => setViewMode('sala')}
-                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
-                  viewMode === 'sala'
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${viewMode === 'sala'
                     ? 'bg-slate-900 border-slate-900 text-white shadow-xs'
                     : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 Por Salón
+              </button>
+              <button
+                onClick={() => setViewMode('taller')}
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${viewMode === 'taller'
+                    ? 'bg-teal-600 border-teal-600 text-white shadow-xs'
+                    : 'bg-white border-teal-200 text-teal-800 hover:bg-teal-50'
+                  }`}
+              >
+                Workshops
               </button>
             </div>
 
@@ -149,15 +173,14 @@ export default function BrochurePrintView({ congressData }) {
                   </button>
                 ))}
               </div>
-            ) : (
+            ) : viewMode === 'sala' ? (
               <div className="flex flex-wrap gap-1.5">
                 {Object.entries(SALA_META).map(([num, meta]) => (
                   <button
                     key={num}
                     onClick={() => setSelectedSala(Number(num))}
-                    className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${
-                      selectedSala === Number(num) ? meta.btnActive : meta.btnIdle
-                    }`}
+                    className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${selectedSala === Number(num) ? meta.btnActive : meta.btnIdle
+                      }`}
                   >
                     <span className="font-black">Sala {num}</span>
                     <span className="font-normal opacity-80"> · {meta.name}</span>
@@ -165,30 +188,46 @@ export default function BrochurePrintView({ congressData }) {
                   </button>
                 ))}
               </div>
+            ) : (
+              <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-semibold text-slate-600">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800">
+                  <span className="w-2 h-2 rounded-full bg-teal-500" />
+                  {workshopSessions.length} workshops en total
+                </span>
+                {days.map((d) => (
+                  <span key={d.id} className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
+                    {shortDayLabel(d.id)}: {workshopsByDay(d.id)}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
 
           {/* Action & Toggle Controls */}
           <div className="flex flex-wrap items-center gap-3 pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-100">
-            <label className="inline-flex items-center gap-2 text-xs font-medium text-slate-600 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={includeGeneral}
-                onChange={(e) => setIncludeGeneral(e.target.checked)}
-                className="rounded border-slate-300 text-unior-wine focus:ring-unior-coral"
-              />
-              Actos generales
-            </label>
+            {viewMode !== 'taller' && (
+              <>
+                <label className="inline-flex items-center gap-2 text-xs font-medium text-slate-600 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={includeGeneral}
+                    onChange={(e) => setIncludeGeneral(e.target.checked)}
+                    className="rounded border-slate-300 text-unior-wine focus:ring-unior-coral"
+                  />
+                  Actos generales
+                </label>
 
-            <label className="inline-flex items-center gap-2 text-xs font-medium text-slate-600 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={includeQA}
-                onChange={(e) => setIncludeQA(e.target.checked)}
-                className="rounded border-slate-300 text-unior-wine focus:ring-unior-coral"
-              />
-              Preguntas y resp.
-            </label>
+                <label className="inline-flex items-center gap-2 text-xs font-medium text-slate-600 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={includeQA}
+                    onChange={(e) => setIncludeQA(e.target.checked)}
+                    className="rounded border-slate-300 text-unior-wine focus:ring-unior-coral"
+                  />
+                  Preguntas y resp.
+                </label>
+              </>
+            )}
 
             {/* DIRECT IMAGE DOWNLOAD BUTTON */}
             <button
@@ -269,7 +308,7 @@ export default function BrochurePrintView({ congressData }) {
           <div className="my-2 p-2 rounded-lg bg-amber-50/80 backdrop-blur-xs border border-amber-200 shadow-2xs flex-shrink-0">
             <h3 className="text-[10px] font-bold text-amber-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-              Pre-Congreso · Miércoles 11 de Noviembre
+              Pre-Congreso · {viewMode === 'taller' ? 'Workshops del Miércoles 11' : 'Miércoles 11 de Noviembre'}
             </h3>
             <div className="brochure-precongress-grid grid grid-cols-2 gap-2">
               {wednesdaySessions.map((session) => (
@@ -302,7 +341,7 @@ export default function BrochurePrintView({ congressData }) {
             <div className="space-y-1.5 flex-1">
               {thursdaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
-                  No hay actividades para {emptyLabel} el día jueves.
+                  {emptyMessage('jueves')}
                 </div>
               ) : (
                 thursdaySessions.map((session) => (
@@ -345,7 +384,7 @@ export default function BrochurePrintView({ congressData }) {
             <div className="space-y-1.5 flex-1">
               {fridaySessions.length === 0 ? (
                 <div className="text-center py-10 text-slate-400 text-xs italic bg-white/50 rounded-xl border border-dashed border-slate-300">
-                  No hay actividades para {emptyLabel} el día viernes.
+                  {emptyMessage('viernes')}
                 </div>
               ) : (
                 fridaySessions.map((session) => (

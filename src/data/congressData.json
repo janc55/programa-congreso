@@ -1524,17 +1524,23 @@
     },
     {
       "day": "2026-11-13",
-      "start": "10:00",
-      "end": "12:00",
+      "start": "10:30",
+      "end": "12:30",
       "sala": null,
       "room": "Sala de Simulación 1",
       "careers": [
         "sis",
         "aud"
       ],
-      "speakers": [],
+      "speakers": [
+        {
+          "n": "Ph.D. Wendy Roxana Jordan Minaya",
+          "d": "Wendy Roxana Jordan Minaya",
+          "s": "wendy-roxana-jordan-minaya"
+        }
+      ],
       "title": null,
-      "topic": null,
+      "topic": "Elaboración del POA",
       "who": null,
       "virtual": false,
       "country": null,
@@ -2044,7 +2050,7 @@
         }
       ],
       "title": null,
-      "topic": null,
+      "topic": "Laboratorio de Skills inteligentes aplicados a la investigación científica",
       "who": null,
       "virtual": false,
       "country": null,
