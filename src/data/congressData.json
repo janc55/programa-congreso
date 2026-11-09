@@ -1163,7 +1163,7 @@
       "day": "2026-11-12",
       "start": "17:00",
       "end": "18:00",
-      "sala": null,
+      "sala": 1,
       "room": null,
       "careers": [],
       "speakers": [
@@ -2028,7 +2028,9 @@
     },
     {
       "careers": [
-        "gas"
+        "gas",
+        "aud",
+        "sis"
       ],
       "speakers": [
         {
@@ -2338,7 +2340,9 @@
     },
     {
       "careers": [
-        "gas"
+        "gas",
+        "aud",
+        "sis"
       ],
       "speakers": [],
       "title": "Preguntas y respuestas",
@@ -2444,7 +2448,7 @@
       "day": "2026-11-13",
       "start": "17:30",
       "end": "18:00",
-      "sala": null,
+      "sala": 1,
       "room": null,
       "careers": [],
       "speakers": [
