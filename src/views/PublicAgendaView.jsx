@@ -37,7 +37,7 @@ export default function PublicAgendaView({ congressData }) {
       // Search Query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
-        const speakerNames = s.speakers?.map(x => x.n.toLowerCase()).join(' ') || '';
+        const speakerNames = s.speakers?.map(x => (x.n || '').toLowerCase()).join(' ') || '';
         const topic = (s.topic || '').toLowerCase();
         const title = (s.title || '').toLowerCase();
         const who = (s.who || '').toLowerCase();

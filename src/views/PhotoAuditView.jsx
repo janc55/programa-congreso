@@ -15,6 +15,8 @@ export default function PhotoAuditView({ congressData }) {
 
     sessions.forEach((s) => {
       s.speakers?.forEach((sp) => {
+        // Ignore incomplete speaker entries (e.g. {} while the name is pending)
+        if (!sp || typeof sp.s !== 'string' || !sp.s.trim()) return;
         if (!map[sp.s]) {
           const hasPhoto = Boolean(SPEAKER_PHOTO_MAP[sp.s]);
           map[sp.s] = {
@@ -30,7 +32,9 @@ export default function PhotoAuditView({ congressData }) {
       });
     });
 
-    return Object.values(map).sort((a, b) => a.speaker.d.localeCompare(b.speaker.d));
+    return Object.values(map).sort((a, b) =>
+      (a.speaker.d || a.speaker.n || '').localeCompare(b.speaker.d || b.speaker.n || '')
+    );
   }, [sessions, careers]);
 
   const countWithPhoto = useMemo(() => speakersList.filter(s => s.hasPhoto).length, [speakersList]);
@@ -43,9 +47,11 @@ export default function PhotoAuditView({ congressData }) {
 
       if (!search.trim()) return true;
       const q = search.toLowerCase();
+      const name = (item.speaker.n || '').toLowerCase();
+      const slug = (item.speaker.s || '').toLowerCase();
       return (
-        item.speaker.n.toLowerCase().includes(q) || 
-        item.speaker.s.toLowerCase().includes(q) ||
+        name.includes(q) ||
+        slug.includes(q) ||
         (item.career || '').toLowerCase().includes(q)
       );
     });

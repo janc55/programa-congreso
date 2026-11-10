@@ -220,7 +220,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 4
@@ -237,7 +237,7 @@
         }
       ],
       "title": null,
-      "topic": null,
+      "topic": "Lo exótico también es Patrimonio",
       "who": null,
       "virtual": false,
       "country": null,
@@ -407,7 +407,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 10
@@ -424,7 +424,7 @@
         }
       ],
       "title": null,
-      "topic": null,
+      "topic": "Sabor Clandestino",
       "who": null,
       "virtual": false,
       "country": null,
@@ -587,7 +587,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 16
@@ -612,7 +612,7 @@
       "sala": 1,
       "room": null,
       "mesa": {
-        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "pres": "Dr. Roberth Eliazar Miranda Rafael",
         "sec": "Dra. Zulema Domínguez Durán"
       },
       "id": 17
@@ -873,7 +873,7 @@
     {
       "day": "2026-11-12",
       "start": "14:30",
-      "end": "16:30",
+      "end": "16:00",
       "sala": null,
       "room": "Sala de Simulación 1",
       "careers": [
@@ -895,15 +895,13 @@
       "notes": [],
       "pending": false,
       "kind": "workshop",
-      "mesa": {
-        "apoyo": "Dra. Zulema Dominguez"
-      },
+      "mesa": {},
       "id": 27
     },
     {
       "day": "2026-11-12",
       "start": "14:30",
-      "end": "16:30",
+      "end": "16:00",
       "sala": null,
       "room": "Sala de Simulación 2",
       "careers": [
@@ -1639,8 +1637,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dr. Roberth Eliazar Miranda Rafael",
-        "sec": "Dr. Alejandro Melendrez Marañón"
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "sec": "Dra. Fátima Bracamonte"
       },
       "id": 52
     },
@@ -1712,15 +1710,15 @@
       ],
       "speakers": [
         {
-          "n": "Dra. Lidia Mamani Atahuichi",
-          "d": "Lidia Mamani Atahuichi",
-          "s": "lidia-mamani-atahuichi"
+          "n": "Dr. Camilo Vásquez Ledezma",
+          "d": "Camilo Vásquez Ledezma",
+          "s": "camilo-vasquez-ledezma"
         }
       ],
       "title": null,
-      "topic": "Agonistas GLP-1",
+      "topic": "IA en triaje y servicios de emergencia y apoyo diagnóstico",
       "who": null,
-      "virtual": false,
+      "virtual": true,
       "country": null,
       "mod": null,
       "notes": [],
@@ -1732,8 +1730,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dr. Roberth Eliazar Miranda Rafael",
-        "sec": "Dr. Alejandro Melendrez Marañón"
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 55
     },
@@ -1867,7 +1865,7 @@
         }
       ],
       "title": null,
-      "topic": "Intubación orotraqueal-Desafios IOT Infantil dificil.",
+      "topic": "Intubación pediátrica - Desafios.",
       "who": null,
       "virtual": true,
       "country": "Brasil",
@@ -1881,8 +1879,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dr. Roberth Eliazar Miranda Rafael",
-        "sec": "Dr. Alejandro Melendrez Marañón"
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 60
     },
@@ -1931,8 +1929,8 @@
       "sala": 3,
       "room": null,
       "mesa": {
-        "pres": "Dr. Roberth Eliazar Miranda Rafael",
-        "sec": "Dr. Alejandro Melendrez Marañón"
+        "pres": "Dra. Celyd del Carmen Gomez Colque",
+        "sec": "Dra Fátima Bracamonte"
       },
       "id": 62
     },
@@ -2104,20 +2102,16 @@
       "careers": [
         "med"
       ],
-      "speakers": [
-        {
-          "n": "Dr. Camilo Vásquez Ledezma",
-          "d": "Camilo Vásquez Ledezma",
-          "s": "camilo-vasquez-ledezma"
-        }
-      ],
+      "speakers": [],
       "title": null,
-      "topic": "IA en triage y servicios de emergencia y apoyo diagnóstico",
+      "topic": "",
       "who": null,
       "virtual": false,
       "country": null,
       "mod": null,
-      "notes": [],
+      "notes": [
+        "Pendiente"
+      ],
       "pending": false,
       "kind": "charla",
       "day": "2026-11-13",
@@ -2127,7 +2121,7 @@
       "room": null,
       "mesa": {
         "pres": "Dra. Ibeth Miranda Flores",
-        "sec": "Dra Fátima Bracamonte"
+        "sec": "Dr. Alejandro Melendrez"
       },
       "id": 69
     },
@@ -2199,13 +2193,18 @@
       ],
       "speakers": [
         {
-          "n": "Dr. Crhystian Patrick Marañón Mendieta",
-          "d": "Crhystian Patrick Marañón Mendieta",
-          "s": "crhystian-patrick-maranon-mendieta"
+          "n": "Dra. Lidia Mamani Atahuichi",
+          "d": "Lidia Mamani Atahuichi",
+          "s": "lidia-mamani-atahuichi"
+        },
+        {
+          "n": "Dra. Carmen Durán",
+          "d": "Carmen Durán",
+          "s": "carmen-duran"
         }
       ],
       "title": null,
-      "topic": "Manejo Quirurgico de la Hemorragia intraparto",
+      "topic": "Agonistas GLP-1",
       "who": null,
       "virtual": false,
       "country": null,
@@ -2220,40 +2219,9 @@
       "room": null,
       "mesa": {
         "pres": "Dra. Ibeth Miranda Flores",
-        "sec": "Dra Fátima Bracamonte"
+        "sec": "Dr. Alejandro Melendrez"
       },
       "id": 72
-    },
-    {
-      "careers": [
-        "gas"
-      ],
-      "speakers": [
-        {
-          "n": "Andres Tapia",
-          "d": "Andres Tapia",
-          "s": "andres-tapia"
-        }
-      ],
-      "title": null,
-      "topic": null,
-      "who": null,
-      "virtual": false,
-      "country": null,
-      "mod": null,
-      "notes": [],
-      "pending": false,
-      "kind": "charla",
-      "day": "2026-11-13",
-      "start": "16:00",
-      "end": "17:00",
-      "sala": 1,
-      "room": null,
-      "mesa": {
-        "pres": "Stephany Sandoval",
-        "sec": "Gabriela Aranibar"
-      },
-      "id": 73
     },
     {
       "careers": [
@@ -2298,7 +2266,7 @@
         }
       ],
       "title": null,
-      "topic": "Integracion de la Medicina Tradicional en la practica de la Medicina Familiar en Paraguay",
+      "topic": "Medicina Tradicional en Medicina Familiar",
       "who": null,
       "virtual": true,
       "country": "Paraguay",
@@ -2313,7 +2281,7 @@
       "room": null,
       "mesa": {
         "pres": "Dra. Ibeth Miranda Flores",
-        "sec": "Dra Fátima Bracamonte"
+        "sec": "Dr. Alejandro Melendrez"
       },
       "id": 75
     },
@@ -2357,12 +2325,12 @@
       "speakers": [],
       "title": "Preguntas y respuestas",
       "topic": null,
-      "who": "Guerrero / Tapia",
+      "who": "Guerrero",
       "virtual": false,
       "country": null,
       "mod": null,
       "notes": [
-        "Nota GTH: SALA 4 17:00-17:30"
+        "Nota GTH: SALA 4 16:00-16:30"
       ],
       "pending": false,
       "kind": "qa",
@@ -2384,7 +2352,7 @@
       "speakers": [],
       "title": "Preguntas y respuestas",
       "topic": null,
-      "who": "Vasquez, Marañón, Noldine",
+      "who": "Durán, Mamani, Noldine",
       "virtual": false,
       "country": null,
       "mod": null,
@@ -2398,7 +2366,7 @@
       "room": null,
       "mesa": {
         "pres": "Dra. Ibeth Miranda Flores",
-        "sec": "Dra Fátima Bracamonte"
+        "sec": "Dr. Alejandro Melendrez"
       },
       "id": 78
     },
@@ -2545,16 +2513,6 @@
       "text": "Workshop en SALA 3 (Piso 6) (14:30–16:30, Katiuska Aranibar Gonzales) se cruza con 14:30–16:00 Sala 3: Yerko Paz Huet"
     },
     {
-      "level": "conflicto",
-      "day": "2026-11-12",
-      "text": "Workshop en SALA 3 (Piso 6) (14:30–16:30, Katiuska Aranibar Gonzales) se cruza con 16:00–17:00 Sala 3: Katiuska Aranibar Gonzales"
-    },
-    {
-      "level": "pendiente",
-      "day": "2026-11-12",
-      "text": "Expositores sin tema en el Excel: Emilio Garnica Villagomez (10:00, Sala 2); Marco Antonio Quelca (11:00, Sala 2)"
-    },
-    {
       "level": "pendiente",
       "day": "2026-11-12",
       "text": "Sin presidente/secretario de mesa: 14:30–16:30 SALA 3 (Piso 6): Katiuska Aranibar Gonzales"
@@ -2587,22 +2545,22 @@
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Expositores sin tema en el Excel: Rolando Manuel Barrientos Gomez (10:30, Sala 2); Abrahan Salas (11:10, Sala 2); Maurice Cazorla Murillo (11:50, Sala 2); Pablo Guerrero (15:00, Sala 1); Andres Tapia (16:00, Sala 1)"
+      "text": "Expositores sin tema en el Excel: Rolando Manuel Barrientos Gomez (10:30, Sala 2); Abrahan Salas (11:10, Sala 2); Maurice Cazorla Murillo (11:50, Sala 2)"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dato pendiente en el Excel: 10:00–10:30 Sala 4: Preguntas y respuestas"
+      "text": "Dato pendiente en el Excel: 10:00–10:30 Sala 4: Preguntas y respuestas (Auditoría)"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dato pendiente en el Excel: 10:00–12:00 Sala de Simulación 1: sin expositor"
+      "text": "Dato pendiente en el Excel: 10:00–12:00 Sala de Simulación 1: PENDIENTE (sin tema ni expositor)"
     },
     {
       "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Sin presidente/secretario de mesa: 10:00–12:00 Sala de Simulación 1: sin expositor"
+      "text": "Sin presidente/secretario de mesa: 10:00–12:00 Sala de Simulación 1: PENDIENTE"
     },
     {
       "level": "pendiente",
@@ -2610,59 +2568,54 @@
       "text": "Sin presidente/secretario de mesa: 14:30–16:00 Sala de Debates de Derecho: Pamela Arias"
     },
     {
-      "level": "revisar",
+      "level": "pendiente",
       "day": "2026-11-13",
-      "text": "Dr. Carlos Ariel Trigo Vargas (Sala 3, Sistemas): la celda de hora del Excel dice \"2\". Se puso 08:40–09:20 por la secuencia; confirmar."
+      "text": "15:00–15:40 Sala 3: Dr. ACEFALIA (PENDIENTE nombre), tema Acefalia; confirmar expositor"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Sala 3, preguntas de las 12:30: dicen \"Nakamura / Vásquez / Flores\", pero Vásquez ya no está en la mañana (ahora dicta Lidia Mamani)."
+      "text": "Sala 1, 16:00–16:30: PREGUNTAS Y RESPUESTAS sin nombres; antes se mencionaba Guerrero/Tapia y Andres Tapia ya no aparece; confirmar"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Dr. Camilo Vásquez Ledezma (15:00): antes decía VIRTUAL y ahora no. Confirmar la modalidad."
+      "text": "Sala 3, 15:40–16:20: Dra. Carmen Durán / Dra. Lidia Mamani, Agonistas GLP-1; confirmar si ambas exponen y si Lidia Mamani dejó el horario de 11:10"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Los temas de Lic. Albina Maldonado y Lic. Ross Ibañez están cruzados entre la mañana (10:30 y 11:30) y la tarde (15:00 y 16:00). Confirmar cuál es el correcto."
+      "text": "Sala 4, 15:00–16:00: Lic. Lizeth Arroyo Rodriguez figura como presidenta y como secretaria"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Dr. Franz Callizaya: ya no dice VIRTUAL y se agregó \"UCEBOL PRESENCIAL\" al final del tema. Se movió a mod; confirmar que viene en persona."
+      "text": "Los temas de Lic. Albina Maldonado y Lic. Ross Ibañez están cruzados entre la mañana (10:30 y 11:30) y la tarde (15:00 y 16:00). Confirmar cuál es el correcto"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "La nota \"Nota GTH: SALA 4 17:00-17:30\" quedó obsoleta: las preguntas de Guerrero/Tapia ya están en Sala 1 a las 17:00, y Sala 4 tiene otras preguntas a esa hora."
-    },
-    {
-      "level": "revisar",
-      "day": "2026-11-13",
-      "text": "Sala 4, 15:00–16:00: Lic. Lizeth Arroyo Rodriguez figura como presidenta y como secretaria."
+      "text": "Dr. Franz Callizaya: el tema incluye UCEBOL PRESENCIAL; confirmar que viene en persona"
     },
     {
       "level": "revisar",
       "day": "general",
-      "text": "Nombres escritos distinto: Noldin/Noldine, Melendrez con y sin Marañón, \"Dra Fátima\" sin punto, Est./Lic. Liliana Pizarro Chiara, Sanchez/Sänchez; hay minúsculas (Raul laime, Ronald tamayo)."
+      "text": "Nombres escritos distinto: Noldin/Noldine, Melendrez con y sin Marañón, Dra Fátima sin punto, Est./Lic. Liliana Pizarro Chiara, Sanchez/Sänchez; hay minúsculas (Raul laime, Ronald tamayo)"
     },
     {
       "level": "revisar",
       "day": "general",
-      "text": "Auditoría y Adm. Empresas comparten un solo color en el Excel y van como una carrera."
+      "text": "Auditoría y Adm. Empresas comparten un solo color en el Excel y van como una carrera"
     },
     {
       "level": "revisar",
       "day": "2026-11-12",
-      "text": "Dr. Yerko Paz Huet dicta \"Derecho Notarial\" el jueves 14:30 y de nuevo el viernes 08:00. Confirmar que es repetición intencional."
+      "text": "Dr. Yerko Paz Huet dicta Derecho Notarial el jueves 14:30 y de nuevo el viernes 08:00. Confirmar que es repetición intencional"
     },
     {
       "level": "revisar",
       "day": "2026-11-13",
-      "text": "Los 4 horarios amarillos sueltos de Sistemas (tarde) ya no aparecen en el Excel; confirmar que no faltan charlas."
+      "text": "Los 4 horarios amarillos sueltos de Sistemas (tarde) ya no aparecen en el Excel; confirmar que no faltan charlas"
     }
   ]
 }

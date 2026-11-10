@@ -134,7 +134,7 @@ export default function App() {
       <footer className="no-print py-6 border-t border-slate-200 bg-white text-center text-xs text-slate-500">
         <p>1er Congreso Internacional de Integración Científica · Universidad Privada de Oruro (UNIOR)</p>
         <p className="text-[11px] text-slate-400 mt-1">12 y 13 de Noviembre de 2026 · Hotel Edén, Oruro, Bolivia</p>
-        <p className="text-[11px] text-slate-400 mt-2 font-medium">Desarrollado por NettiDev</p>
+        <p className="text-[15px] text-slate-400 mt-3 font-medium">Desarrollado por <span className="text-sky-800">NettiDev</span></p>
       </footer>
     </div>
   );
