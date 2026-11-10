@@ -44,7 +44,9 @@ export const SPEAKER_PHOTO_MAP = {
   'jorge-nakamura-kina': 'jorge-nakamura.jpeg',
   'lidia-mamani-atahuichi': 'lidia-mamani.jpeg',
   'cesar-vincenty': 'cesar-vincenty.jpeg',
-  'luis-pacheco': 'luis-pacheco.jpeg'
+  'luis-pacheco': 'luis-pacheco.jpeg',
+  'wendy-roxana-jordan-minaya': 'wendy-jordan.jpeg',
+  'jenny-herminia-marca-manani': 'jenny-marca.jpeg'
 
 };
 
