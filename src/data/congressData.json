@@ -2165,11 +2165,6 @@
           "n": "Dra. Lidia Mamani Atahuichi",
           "d": "Lidia Mamani Atahuichi",
           "s": "lidia-mamani-atahuichi"
-        },
-        {
-          "n": "Dra. Carmen Durán",
-          "d": "Carmen Durán",
-          "s": "carmen-duran"
         }
       ],
       "title": null,
@@ -2352,7 +2347,7 @@
       "speakers": [],
       "title": "Preguntas y respuestas",
       "topic": null,
-      "who": "Durán, Mamani, Noldine",
+      "who": "Mamani, Noldine",
       "virtual": false,
       "country": null,
       "mod": null,
