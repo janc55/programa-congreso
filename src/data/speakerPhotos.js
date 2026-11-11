@@ -37,16 +37,17 @@ export const SPEAKER_PHOTO_MAP = {
   'rolando-manuel-barrientos-gomez': 'rolando-barrientos.jpeg',
   'sonia-flores-mamani': 'sonia-flores.jpeg',
   'abrahan-salas': 'abrahan-salas.png',
-  'andres-tapia': 'andres-tapia.png',
   'maurice-cazorla-murillo': 'maurice-cazorla.jpg',
   'katiuska-aranibar-gonzales': 'katihuska-aranibar.jpeg',
-  'crhystian-patrick-maranon-mendieta': 'crhystian-maranon.jpg',
   'jorge-nakamura-kina': 'jorge-nakamura.jpeg',
   'lidia-mamani-atahuichi': 'lidia-mamani.jpeg',
   'cesar-vincenty': 'cesar-vincenty.jpeg',
   'luis-pacheco': 'luis-pacheco.jpeg',
   'wendy-roxana-jordan-minaya': 'wendy-jordan.jpeg',
-  'jenny-herminia-marca-manani': 'jenny-marca.jpeg'
+  'jenny-herminia-marca-manani': 'jenny-marca.jpeg',
+  'daniel-rodrigo': 'daniel-rodrigo.jpeg',
+  'armando-adrian-jimenez': 'armando-jimenez.jpeg',
+  'eulalio-aguirre': 'eulalio-aguirre.jpeg'
 
 };
 
@@ -58,5 +59,6 @@ export const getCountryFlagPath = (country) => {
   if (c === 'paraguay') return '/assets/flags/py.png';
   if (c === 'peru' || c === 'perú') return '/assets/flags/pe.png';
   if (c === 'mexico' || c === 'méxico') return '/assets/flags/mx.png';
+  if (c === 'venezuela' || c === 'venezuela') return '/assets/flags/ve.png';
   return '/assets/flags/bo.png';
 };

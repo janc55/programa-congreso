@@ -510,9 +510,9 @@
       ],
       "speakers": [
         {
-          "n": "Lic. Leaño",
-          "d": "Leaño",
-          "s": "leano"
+          "n": "Lic. Eulalio Aguirre Calcina",
+          "d": "Eulalio Aguirre Calcina",
+          "s": "eulalio-aguirre"
         }
       ],
       "title": null,
@@ -545,7 +545,7 @@
       "topic": "Cirugía Ortognática",
       "who": null,
       "virtual": true,
-      "country": null,
+      "country": "mexico",
       "mod": null,
       "notes": [],
       "pending": false,
@@ -807,37 +807,6 @@
         "sec": "s:Lic. America Ayllón - Ing. Rocio Carrasco"
       },
       "id": 24
-    },
-    {
-      "careers": [
-        "der"
-      ],
-      "speakers": [
-        {
-          "n": "Dr. Yerko Paz Huet",
-          "d": "Yerko Paz Huet",
-          "s": "yerko-paz-huet"
-        }
-      ],
-      "title": null,
-      "topic": "Derecho Notarial",
-      "who": null,
-      "virtual": false,
-      "country": null,
-      "mod": null,
-      "notes": [],
-      "pending": false,
-      "kind": "charla",
-      "day": "2026-11-12",
-      "start": "14:30",
-      "end": "16:00",
-      "sala": 3,
-      "room": null,
-      "mesa": {
-        "pres": "Dr. Jonahan Alarcon",
-        "sec": "Dra. Norma Campero"
-      },
-      "id": 25
     },
     {
       "careers": [
@@ -1201,7 +1170,7 @@
       "title": null,
       "topic": "Derecho Notarial",
       "who": null,
-      "virtual": false,
+      "virtual": true,
       "country": null,
       "mod": null,
       "notes": [],
@@ -1295,7 +1264,7 @@
       "topic": "Desafíos restauradores odontopediatría",
       "who": null,
       "virtual": true,
-      "country": null,
+      "country": "venezuela",
       "mod": null,
       "notes": [],
       "pending": false,
@@ -2042,8 +2011,8 @@
       ],
       "speakers": [
         {
-          "n": "Pablo Guerrero",
-          "d": "Pablo Guerrero",
+          "n": "M.Sc. José Pablo Guerrero",
+          "d": "José Pablo Guerrero",
           "s": "pablo-guerrero"
         }
       ],
@@ -2204,7 +2173,7 @@
         }
       ],
       "title": null,
-      "topic": "Agonistas GLP-1",
+      "topic": "Abordaje Multidisciplinario de Enfermedades Cardiorrenometabólicas",
       "who": null,
       "virtual": false,
       "country": null,
@@ -2222,6 +2191,37 @@
         "sec": "Dr. Alejandro Melendrez"
       },
       "id": 72
+    },
+    {
+      "careers": [
+        "gas"
+      ],
+      "speakers": [
+        {
+          "n": "Daniel Ricardo Rodrigo Siles",
+          "d": "Daniel Ricardo Rodrigo Siles",
+          "s": "daniel-rodrigo"
+        }
+      ],
+      "title": null,
+      "topic": "El arte de mirar: vivencias, aprendizajes y pasión por la fotografía",
+      "who": null,
+      "virtual": false,
+      "country": null,
+      "mod": null,
+      "notes": [],
+      "pending": false,
+      "kind": "charla",
+      "day": "2026-11-13",
+      "start": "16:00",
+      "end": "17:00",
+      "sala": 1,
+      "room": null,
+      "mesa": {
+        "pres": "Stephany Sandoval",
+        "sec": "Gabriela Aranibar"
+      },
+      "id": 73
     },
     {
       "careers": [
@@ -2325,12 +2325,12 @@
       "speakers": [],
       "title": "Preguntas y respuestas",
       "topic": null,
-      "who": "Guerrero",
+      "who": "Guerrero / Rodrigo",
       "virtual": false,
       "country": null,
       "mod": null,
       "notes": [
-        "Nota GTH: SALA 4 16:00-16:30"
+        "Nota GTH: SALA 4 17:00-17:30"
       ],
       "pending": false,
       "kind": "qa",
